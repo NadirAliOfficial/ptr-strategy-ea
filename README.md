@@ -37,10 +37,9 @@ the client's own wording exactly.
 
 ## Status
 
-EA source written (`ea/PtrStrategy_EA.mq4`). Not yet compiled — this needs
-a real MetaTrader 4 install (MQL4 and MQL5 are different languages; MT5's
-MetaEditor cannot compile true MQL4, confirmed directly). Compiling is in
-progress on a Windows machine with MT4 installed.
+EA source written (`ea/PtrStrategy_EA.mq4`) and successfully compiled with
+MetaEditor on MetaTrader 4 (0 errors, 0 warnings). The compiled deliverable
+`ea/PtrStrategy_EA.ex4` and compiled indicators (`.ex4`) are ready.
 
 ## Deliverables
 
