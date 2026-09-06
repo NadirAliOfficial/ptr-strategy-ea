@@ -6,10 +6,10 @@
 [![Status](https://img.shields.io/badge/Status-Compiled%20%26%20Verified-success.svg)]()
 
 An automated Expert Advisor (EA) developed for **MetaTrader 4 (MQL4)**, built around the client's proprietary four-indicator **"Ptr"** system:
-* **Ptr Mega Trend**: Hull Moving Average (HMA) trend baseline and directional flip triggers.
-* **Yellow Ptr Arslan**: Faster non-repainting Triangular Moving Average (TMA) band with reversal arrows.
-* **Norepaint zone 3 green**: Slower non-repainting TMA band with reversal arrows.
-* **White Ptr Arslan**: Centered repainting TMA band (preserved for visual chart reference per client specifications).
+* **Ptr Mega Trend**: Hull Moving Average (HMA), loaded at two periods (48 and 78) — a cross between them is the primary trigger.
+* **Yellow Ptr Arslan**: Faster non-repainting Triangular Moving Average (TMA) band — its own center line crossing White confirms.
+* **Norepaint zone 3 green**: Slower non-repainting TMA band — its own center line crossing White also confirms.
+* **White Ptr Arslan**: Centered repainting TMA band. Initially assumed visual-only; confirmed by the client to actually be the confirmation line Yellow and Green must cross.
 
 The EA is designed with switchable inputs for strategy variants rather than hardcoded assumptions, allowing full configuration without needing code recompilations.
 
@@ -21,10 +21,10 @@ All indicators are integrated via `iCustom()` matching exact source parameter or
 
 | Indicator File | Role | Confirmed Parameters | Buffer Used in EA |
 |---|---|---|---|
-| `Ptr Mega Trend.mq4` | Primary trend direction & flip signals | Fast HMA `48`, Slow HMA `78`, Linear Weighted (`MODE_LWMA`), Close price | Buffer `2` (`HMA` line) |
-| `Yellow Ptr Arslan.mq4` | Fast no-repaint TMA band confirmation | Half Length `21` (corrected from default 60), TimeFrame `60` (H1), Close price, Dev `1.8` | Buffer `3` (Down Arrow), Buffer `4` (Up Arrow) |
-| `Norepaint zone 3 green.mq4` | Slow no-repaint TMA band confirmation | Half Length `40`, TimeFrame `60` (H1), Close price, Dev `1.8` | Buffer `3` (Down Arrow), Buffer `4` (Up Arrow) |
-| `White Ptr Arslan.mq4` | Centered TMA band (visual reference only) | Half Length `32`, Period `100`, Multiplier `2.8`, Weighted price | Visual reference on chart; excluded from entry logic |
+| `Ptr Mega Trend.mq4` | Primary trigger: HMA(48) crosses HMA(78) | Fast HMA `48`, Slow HMA `78`, Linear Weighted (`MODE_LWMA`), Close price | Buffer `2` (`HMA` line), called once per period |
+| `Yellow Ptr Arslan.mq4` | Confirmation: its center line crossing White | Half Length `21` (corrected from default 60), TimeFrame `60` (H1), Close price, Dev `1.8` | Buffer `0` (center TMA) |
+| `Norepaint zone 3 green.mq4` | Confirmation: its center line crossing White | Half Length `40`, TimeFrame `60` (H1), Close price, Dev `1.8` | Buffer `0` (center TMA) |
+| `White Ptr Arslan.mq4` | The line Yellow and Green must cross | Half Length `32`, Period `100`, Multiplier `2.8`, Weighted price | Buffer `0` (center TMA) |
 
 > **Note:** In MT4, indicator filenames must match `#define IND_...` in `PtrStrategy_EA.mq4` exactly:
 > - `#define IND_MEGA "Ptr Mega Trend"`
@@ -38,19 +38,28 @@ All indicators are integrated via `iCustom()` matching exact source parameter or
 
 To accommodate client preferences without rebuilding, key trading behaviors are exposed as external inputs:
 
-### 1. Entry Trigger (`InpEntryMode`)
-* `ENTRY_MEGA_PLUS_BANDS` *(Default)*: MegaTrend flips direction, followed by a same-direction reversal arrow from either the Yellow or Green band within `InpConfirmTimeoutBars` bars (default: 3 bars).
-* `ENTRY_MEGA_ONLY`: MegaTrend direction flip alone confirms the entry.
+### 1. Entry Trigger (`InpEntryMode`) — CONFIRMED
+Client's own words: *"We do not care about any crosses of Green/Yellow by themselves
+at all. We only want to see both yellow/green have crossed the White Dotted line."*
+* `ENTRY_MEGA_PLUS_BANDS` *(Default, confirmed)*: MegaTrend crosses, AND both Yellow and Green must each cross White's own center line within `InpConfirmTimeoutBars` bars (default: 3). Not each band's own internal signal — specifically Yellow crossing White, and Green crossing White. Tracked independently, they don't need to cross on the same bar.
+* `ENTRY_MEGA_ONLY`: MegaTrend cross alone, no band confirmation. Kept as a switch, not the confirmed behavior.
 
-### 2. MegaTrend Trigger (`InpMegaTrigger`)
-* `MEGA_SINGLE_FLIP` *(Default)*: The fast HMA(48) line changes its slope direction (`cur > prev`).
-* `MEGA_CROSS_48_78`: The fast HMA(48) crosses above (Buy) or below (Sell) the slow HMA(78).
+### 2. MegaTrend Trigger (`InpMegaTrigger`) — CONFIRMED
+Client's settings sheet, in his own words: *"We do not wait for arrows, but we take
+trades upon crosses of both 78 and 48 MegaTr. Lines."* (The "Stochastic 90/10 levels"
+mentioned alongside this are just the visual reference lines the MegaTrend arrows are
+drawn against on his chart — there is no real Stochastic indicator or calculation
+involved anywhere in this strategy, confirmed directly by the client after an earlier
+misread of his chart screenshot.)
+* `MEGA_CROSS_48_78` *(Default, confirmed)*: The fast HMA(48) crosses the slow HMA(78).
+* `MEGA_SINGLE_FLIP`: A single HMA(48) direction flip. Kept as a switch, not the confirmed behavior.
 
-### 3. Exit Method (`InpExitMode`)
-* `EXIT_FIXED_PIPS` *(Default)*: Standard Fixed Stop Loss and Take Profit calculated in pips (`InpTakeProfitPips`, `InpStopLossPips`) with automatic 3/5-digit broker point normalization.
-* `EXIT_STOP_AND_REVERSE`: Positions are held until an opposing confirmed signal arrives, at which point the current trade is closed and reversed.
+### 3. Exit Method (`InpExitMode`) — left open by the client
+Client's own words: *"I will study harder later... leave this open... set it in properties at a later date."*
+* `EXIT_FIXED_PIPS` *(Default)*: Fixed SL/TP in pips (`InpTakeProfitPips`, `InpStopLossPips`), 3/5-digit broker point normalization.
+* `EXIT_STOP_AND_REVERSE`: Hold until the opposite confirmed signal, then close and reverse.
 
-### 4. Bar Execution Timing (Confirmed)
+### 5. Bar Execution Timing (Confirmed)
 Entries strictly execute on the **open of the bar following confirmation** (`IsNewBar()`), adhering to the client rule: *"enter on the following opening candle"*.
 
 ---
@@ -60,7 +69,7 @@ Entries strictly execute on the **open of the bar following confirmation** (`IsN
 ```mql4
 //=== Strategy Triggers ===
 input ENUM_ENTRY_MODE   InpEntryMode          = ENTRY_MEGA_PLUS_BANDS; // Entry confirmation mode
-input ENUM_MEGA_TRIGGER InpMegaTrigger        = MEGA_SINGLE_FLIP;      // MegaTrend calculation mode
+input ENUM_MEGA_TRIGGER InpMegaTrigger        = MEGA_CROSS_48_78;       // MegaTrend calculation mode
 input ENUM_EXIT_MODE    InpExitMode           = EXIT_FIXED_PIPS;       // Exit management mode
 input int               InpConfirmTimeoutBars = 3;                     // Max bars to wait for band confirm
 
@@ -69,6 +78,9 @@ input int    InpMegaFastPeriod   = 48;    // MegaTrend fast HMA period
 input int    InpMegaSlowPeriod   = 78;    // MegaTrend slow HMA period
 input int    InpYellowHalfLength = 21;    // Yellow TMA band half length
 input int    InpGreenHalfLength  = 40;    // Green TMA band half length
+input int    InpWhiteHalfLength  = 32;    // White TMA line — the confirmation target
+input int    InpWhitePeriod      = 100;   // White TMA bands period
+input double InpWhiteMultiplier  = 2.8;   // White TMA bands deviation
 input string InpBandTimeFrame    = "60";  // Band timeframe (60 = H1)
 
 //=== Trade & Risk Management ===
