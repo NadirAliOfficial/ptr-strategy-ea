@@ -1,14 +1,11 @@
 //+------------------------------------------------------------------+
 //| PtrStrategy_EA.mq4                                                |
-//| Trades the Ptr indicator set: MegaTrend (HMA) + Yellow/Green      |
-//| no-repaint TMA bands, White TMA kept for visual reference only.   |
+//| Trades the Ptr indicator set: MegaTrend (HMA48/78 cross) plus     |
+//| Yellow and Green each crossing the White TMA line as confirmation.|
+//| All three confirmed directly by the client, see README.md.        |
 //|                                                                    |
-//| Two open questions from the client are not guessed into fixed     |
-//| behaviour, they are switches — see README.md in this repo for     |
-//| the exact wording of what's confirmed vs still pending:           |
-//|   InpEntryMode    — MegaTrend alone, or MegaTrend + band confirm  |
-//|   InpMegaTrigger  — single HMA(48) flip, or HMA(48)/HMA(78) cross |
-//|   InpExitMode     — fixed pips, or hold-and-reverse               |
+//| InpExitMode is left as a switch — client explicitly wants this    |
+//| decided later, in the EA's own Properties, no rebuild needed.     |
 //+------------------------------------------------------------------+
 #property strict
 
@@ -18,7 +15,7 @@
 enum ENUM_ENTRY_MODE
 {
    ENTRY_MEGA_ONLY,        // MegaTrend flip alone triggers entry
-   ENTRY_MEGA_PLUS_BANDS   // MegaTrend flip + Yellow/Green band confirm
+   ENTRY_MEGA_PLUS_BANDS   // MegaTrend flip + Yellow AND Green each crossing White
 };
 
 enum ENUM_MEGA_TRIGGER
@@ -34,12 +31,12 @@ enum ENUM_EXIT_MODE
 };
 
 //+------------------------------------------------------------------+
-//| Inputs — pending client confirmation (see README)                 |
+//| Inputs — confirmed by the client directly                         |
 //+------------------------------------------------------------------+
-input group "=== PENDING CLIENT CONFIRMATION (see README) ==="
-input ENUM_ENTRY_MODE   InpEntryMode         = ENTRY_MEGA_PLUS_BANDS;
-input ENUM_MEGA_TRIGGER InpMegaTrigger       = MEGA_SINGLE_FLIP;
-input ENUM_EXIT_MODE    InpExitMode          = EXIT_FIXED_PIPS;
+input group "=== Strategy — confirmed by client ==="
+input ENUM_ENTRY_MODE   InpEntryMode         = ENTRY_MEGA_PLUS_BANDS;   // "We only want to see both yellow/green have crossed the White Dotted line"
+input ENUM_MEGA_TRIGGER InpMegaTrigger       = MEGA_CROSS_48_78;        // "we take trades upon crosses of both 78 and 48 MegaTr. Lines"
+input ENUM_EXIT_MODE    InpExitMode          = EXIT_FIXED_PIPS;         // Left open by client, adjust in Properties
 input int               InpConfirmTimeoutBars = 3;      // Bars allowed for band confirm after a Mega flip
 
 //+------------------------------------------------------------------+
@@ -50,9 +47,9 @@ input int    InpMegaFastPeriod  = 48;     // Ptr Mega Trend HMA period (fast)
 input int    InpMegaSlowPeriod  = 78;     // Ptr Mega Trend HMA period (slow)
 input int    InpYellowHalfLength = 21;    // Yellow Ptr Arslan half length
 input int    InpGreenHalfLength  = 40;    // Norepaint zone 3 green half length
-input int    InpWhiteHalfLength  = 32;    // White Ptr Arslan half length (visual only)
-input int    InpWhitePeriod      = 100;   // White Ptr Arslan bands period (visual only)
-input double InpWhiteMultiplier  = 2.8;   // White Ptr Arslan bands deviation (visual only)
+input int    InpWhiteHalfLength  = 32;    // White Ptr Arslan half length — used as the confirmation line
+input int    InpWhitePeriod      = 100;   // White Ptr Arslan bands period
+input double InpWhiteMultiplier  = 2.8;   // White Ptr Arslan bands deviation
 input string InpBandTimeFrame    = "60";  // Yellow/Green TimeFrame setting (H1 per sheet)
 
 //+------------------------------------------------------------------+
@@ -86,8 +83,14 @@ struct PendingSignal
    bool     confirmed;   // ready to execute on the next bar open
    int      dir;         // +1 buy, -1 sell
    int      barsSeen;    // bars spent waiting for band confirmation
+   bool     yellowSeen;  // Yellow has crossed White this window
+   bool     greenSeen;   // Green has crossed White this window
 
-   void Reset() { active = false; confirmed = false; dir = 0; barsSeen = 0; }
+   void Reset()
+   {
+      active = false; confirmed = false; dir = 0; barsSeen = 0;
+      yellowSeen = false; greenSeen = false;
+   }
 };
 PendingSignal g_pending;
 
@@ -159,36 +162,48 @@ int MegaSignalDir(int shift)
 }
 
 //+------------------------------------------------------------------+
-//| Yellow / Green band helpers — reversal arrows built into each     |
-//| indicator (buffer 3 = down arrow, buffer 4 = up arrow)            |
+//| Center-line helpers — White's own center TMA (buffer 0), and      |
+//| Yellow/Green's own center TMA (also buffer 0 in those files)      |
 //+------------------------------------------------------------------+
-bool BandUpArrow(string indName, int halfLength, int shift)
+double WhiteValue(int shift)
 {
-   double v = iCustom(NULL, 0, indName, InpBandTimeFrame, halfLength,
-                       PRICE_CLOSE, 1.8, false, false, false, false, true,
-                       4, shift);
-   return (v != EMPTY_VALUE);
+   // White Ptr Arslan's own enPrices enum isn't visible here, pr_weighted
+   // is position 6 in that file's enum (pr_close=0 ... pr_weighted=6)
+   return iCustom(NULL, 0, IND_WHITE, InpWhiteHalfLength, 6,
+                  InpWhitePeriod, InpWhiteMultiplier, 0, shift);
 }
 
-bool BandDownArrow(string indName, int halfLength, int shift)
+double BandCenterValue(string indName, int halfLength, int shift)
 {
-   double v = iCustom(NULL, 0, indName, InpBandTimeFrame, halfLength,
-                       PRICE_CLOSE, 1.8, false, false, false, false, true,
-                       3, shift);
-   return (v != EMPTY_VALUE);
+   return iCustom(NULL, 0, indName, InpBandTimeFrame, halfLength,
+                  PRICE_CLOSE, 1.8, false, false, false, false, true,
+                  0, shift);
 }
 
-bool YellowUpArrow(int shift)   { return BandUpArrow(IND_YELLOW, InpYellowHalfLength, shift); }
-bool YellowDownArrow(int shift) { return BandDownArrow(IND_YELLOW, InpYellowHalfLength, shift); }
-bool GreenUpArrow(int shift)    { return BandUpArrow(IND_GREEN, InpGreenHalfLength, shift); }
-bool GreenDownArrow(int shift)  { return BandDownArrow(IND_GREEN, InpGreenHalfLength, shift); }
+double YellowValue(int shift) { return BandCenterValue(IND_YELLOW, InpYellowHalfLength, shift); }
+double GreenValue(int shift)  { return BandCenterValue(IND_GREEN, InpGreenHalfLength, shift); }
 
-//--- true if either Yellow or Green fired a same-direction reversal
-//    arrow on the given closed bar
-bool BandsConfirmAt(int dir, int shift)
+//--- Confirmed by client: "we do not care about any crosses of Green/Yellow
+//    by themselves at all, we only want to see both yellow/green have
+//    crossed the White Dotted line." So this checks Yellow (or Green)
+//    crossing White's own line, not either band's own internal signal.
+//    Tracked independently in g_pending (yellowSeen/greenSeen) since they
+//    won't necessarily cross White on the same bar.
+bool BandCrossedWhiteAt(bool isYellow, int dir, int shift)
 {
-   if(dir > 0) return (YellowUpArrow(shift) || GreenUpArrow(shift));
-   if(dir < 0) return (YellowDownArrow(shift) || GreenDownArrow(shift));
+   double bandNow  = isYellow ? YellowValue(shift)     : GreenValue(shift);
+   double bandPrev = isYellow ? YellowValue(shift + 1)  : GreenValue(shift + 1);
+   double whiteNow  = WhiteValue(shift);
+   double whitePrev = WhiteValue(shift + 1);
+
+   if(bandNow == EMPTY_VALUE || bandPrev == EMPTY_VALUE ||
+      whiteNow == EMPTY_VALUE || whitePrev == EMPTY_VALUE) return false;
+
+   bool wasAbove = bandPrev > whitePrev;
+   bool isAbove  = bandNow  > whiteNow;
+
+   if(dir > 0) return (isAbove && !wasAbove);    // crossed up through White
+   if(dir < 0) return (!isAbove && wasAbove);    // crossed down through White
    return false;
 }
 
@@ -300,30 +315,46 @@ void OnTick()
    int megaDir = MegaSignalDir(1);
    if(megaDir != 0 && (!g_pending.active || g_pending.dir != megaDir))
    {
+      g_pending.Reset();
       g_pending.active    = true;
       g_pending.confirmed = (InpEntryMode == ENTRY_MEGA_ONLY);
       g_pending.dir       = megaDir;
-      g_pending.barsSeen  = 0;
 
       Print("[Signal] MegaTrend ", megaDir > 0 ? "BUY" : "SELL",
             InpEntryMode == ENTRY_MEGA_ONLY
                ? " — executing next open."
-               : " — waiting up to " + IntegerToString(InpConfirmTimeoutBars) + " bars for band confirmation.");
+               : " — waiting up to " + IntegerToString(InpConfirmTimeoutBars) +
+                 " bars for Yellow and Green to cross White.");
    }
 
-   //--- 3) Still waiting on Yellow/Green band confirmation
+   //--- 3) Still waiting on confirmation — client confirmed we only care
+   //    about Yellow and Green each crossing White, not their own signals,
+   //    and both are required. Tracked independently since they won't
+   //    necessarily cross White on the same bar.
    if(g_pending.active && !g_pending.confirmed)
    {
       g_pending.barsSeen++;
 
-      if(BandsConfirmAt(g_pending.dir, 1))
+      if(!g_pending.yellowSeen && BandCrossedWhiteAt(true, g_pending.dir, 1))
+      {
+         g_pending.yellowSeen = true;
+         Print("[Signal] Yellow crossed White, ", g_pending.dir > 0 ? "BUY" : "SELL");
+      }
+      if(!g_pending.greenSeen && BandCrossedWhiteAt(false, g_pending.dir, 1))
+      {
+         g_pending.greenSeen = true;
+         Print("[Signal] Green crossed White, ", g_pending.dir > 0 ? "BUY" : "SELL");
+      }
+
+      if(g_pending.yellowSeen && g_pending.greenSeen)
       {
          g_pending.confirmed = true;
-         Print("[Signal] Band confirmation received, executing next open.");
+         Print("[Signal] Both Yellow and Green crossed White, executing next open.");
       }
       else if(g_pending.barsSeen >= InpConfirmTimeoutBars)
       {
-         Print("[Signal] Band confirmation timed out after ", g_pending.barsSeen, " bars, discarding.");
+         Print("[Signal] Confirmation timed out after ", g_pending.barsSeen, " bars",
+               " (yellow=", g_pending.yellowSeen, " green=", g_pending.greenSeen, "), discarding.");
          g_pending.Reset();
       }
    }
