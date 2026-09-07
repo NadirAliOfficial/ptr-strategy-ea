@@ -82,14 +82,11 @@ struct PendingSignal
    bool     active;      // a Mega flip is being tracked
    bool     confirmed;   // ready to execute on the next bar open
    int      dir;         // +1 buy, -1 sell
-   int      barsSeen;    // bars spent waiting for band confirmation
-   bool     yellowSeen;  // Yellow has crossed White this window
-   bool     greenSeen;   // Green has crossed White this window
+   int      barsSeen;    // bars spent waiting for band alignment
 
    void Reset()
    {
       active = false; confirmed = false; dir = 0; barsSeen = 0;
-      yellowSeen = false; greenSeen = false;
    }
 };
 PendingSignal g_pending;
@@ -183,27 +180,27 @@ double BandCenterValue(string indName, int halfLength, int shift)
 double YellowValue(int shift) { return BandCenterValue(IND_YELLOW, InpYellowHalfLength, shift); }
 double GreenValue(int shift)  { return BandCenterValue(IND_GREEN, InpGreenHalfLength, shift); }
 
-//--- Confirmed by client: "we do not care about any crosses of Green/Yellow
-//    by themselves at all, we only want to see both yellow/green have
-//    crossed the White Dotted line." So this checks Yellow (or Green)
-//    crossing White's own line, not either band's own internal signal.
-//    Tracked independently in g_pending (yellowSeen/greenSeen) since they
-//    won't necessarily cross White on the same bar.
-bool BandCrossedWhiteAt(bool isYellow, int dir, int shift)
+//--- Confirmed by client: "we only want to see both yellow/green have
+//    crossed the White Dotted line." Tested as a discrete cross event for
+//    each band independently first — over a full year of EURCHF H4 that
+//    produced 0 trades, since Green (half length 40) is roughly twice as
+//    slow as Yellow (half length 21) and essentially never crosses within
+//    the same few-bar window Yellow does. Switched to a state check
+//    instead: at the time of the signal, is Yellow on the far side of
+//    White, AND is Green also on the far side of White. Matches how this
+//    reads on a chart at a glance, and isn't fragile to the speed gap
+//    between the two bands.
+bool BandsAlignedAt(int dir, int shift)
 {
-   double bandNow  = isYellow ? YellowValue(shift)     : GreenValue(shift);
-   double bandPrev = isYellow ? YellowValue(shift + 1)  : GreenValue(shift + 1);
+   double yellowNow = YellowValue(shift);
+   double greenNow  = GreenValue(shift);
    double whiteNow  = WhiteValue(shift);
-   double whitePrev = WhiteValue(shift + 1);
 
-   if(bandNow == EMPTY_VALUE || bandPrev == EMPTY_VALUE ||
-      whiteNow == EMPTY_VALUE || whitePrev == EMPTY_VALUE) return false;
+   if(yellowNow == EMPTY_VALUE || greenNow == EMPTY_VALUE || whiteNow == EMPTY_VALUE)
+      return false;
 
-   bool wasAbove = bandPrev > whitePrev;
-   bool isAbove  = bandNow  > whiteNow;
-
-   if(dir > 0) return (isAbove && !wasAbove);    // crossed up through White
-   if(dir < 0) return (!isAbove && wasAbove);    // crossed down through White
+   if(dir > 0) return (yellowNow > whiteNow && greenNow > whiteNow);
+   if(dir < 0) return (yellowNow < whiteNow && greenNow < whiteNow);
    return false;
 }
 
@@ -324,37 +321,23 @@ void OnTick()
             InpEntryMode == ENTRY_MEGA_ONLY
                ? " — executing next open."
                : " — waiting up to " + IntegerToString(InpConfirmTimeoutBars) +
-                 " bars for Yellow and Green to cross White.");
+                 " bars for Yellow and Green to align past White.");
    }
 
-   //--- 3) Still waiting on confirmation — client confirmed we only care
-   //    about Yellow and Green each crossing White, not their own signals,
-   //    and both are required. Tracked independently since they won't
-   //    necessarily cross White on the same bar.
+   //--- 3) Still waiting on confirmation — checked as a state each bar:
+   //    Yellow and Green both on the far side of White, in signal direction.
    if(g_pending.active && !g_pending.confirmed)
    {
       g_pending.barsSeen++;
 
-      if(!g_pending.yellowSeen && BandCrossedWhiteAt(true, g_pending.dir, 1))
-      {
-         g_pending.yellowSeen = true;
-         Print("[Signal] Yellow crossed White, ", g_pending.dir > 0 ? "BUY" : "SELL");
-      }
-      if(!g_pending.greenSeen && BandCrossedWhiteAt(false, g_pending.dir, 1))
-      {
-         g_pending.greenSeen = true;
-         Print("[Signal] Green crossed White, ", g_pending.dir > 0 ? "BUY" : "SELL");
-      }
-
-      if(g_pending.yellowSeen && g_pending.greenSeen)
+      if(BandsAlignedAt(g_pending.dir, 1))
       {
          g_pending.confirmed = true;
-         Print("[Signal] Both Yellow and Green crossed White, executing next open.");
+         Print("[Signal] Yellow and Green both aligned past White, executing next open.");
       }
       else if(g_pending.barsSeen >= InpConfirmTimeoutBars)
       {
-         Print("[Signal] Confirmation timed out after ", g_pending.barsSeen, " bars",
-               " (yellow=", g_pending.yellowSeen, " green=", g_pending.greenSeen, "), discarding.");
+         Print("[Signal] Bands never aligned within ", g_pending.barsSeen, " bars, discarding.");
          g_pending.Reset();
       }
    }

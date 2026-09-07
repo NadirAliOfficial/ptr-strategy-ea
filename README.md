@@ -41,7 +41,7 @@ To accommodate client preferences without rebuilding, key trading behaviors are 
 ### 1. Entry Trigger (`InpEntryMode`) — CONFIRMED
 Client's own words: *"We do not care about any crosses of Green/Yellow by themselves
 at all. We only want to see both yellow/green have crossed the White Dotted line."*
-* `ENTRY_MEGA_PLUS_BANDS` *(Default, confirmed)*: MegaTrend crosses, AND both Yellow and Green must each cross White's own center line within `InpConfirmTimeoutBars` bars (default: 3). Not each band's own internal signal — specifically Yellow crossing White, and Green crossing White. Tracked independently, they don't need to cross on the same bar.
+* `ENTRY_MEGA_PLUS_BANDS` *(Default, confirmed)*: MegaTrend crosses, AND Yellow and Green are both on the far side of White (in the signal direction) within `InpConfirmTimeoutBars` bars (default: 3). Checked as a state (Yellow > White and Green > White for a buy), not a discrete cross event for each — tested the discrete-event version first over a full year of EURCHF H4, it produced 0 trades because Green (half length 40) is roughly twice as slow as Yellow (half length 21) and essentially never crosses within the same short window Yellow does. The state check matches how this reads on a chart at a glance and isn't fragile to that speed gap.
 * `ENTRY_MEGA_ONLY`: MegaTrend cross alone, no band confirmation. Kept as a switch, not the confirmed behavior.
 
 ### 2. MegaTrend Trigger (`InpMegaTrigger`) — CONFIRMED
