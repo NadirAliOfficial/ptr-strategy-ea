@@ -1,8 +1,10 @@
 //+------------------------------------------------------------------+
 //| PtrStrategy_EA.mq4                                                |
-//| Trades the Ptr indicator set: MegaTrend (HMA48/78 cross) plus     |
-//| Yellow and Green each crossing the White TMA line as confirmation.|
-//| All three confirmed directly by the client, see README.md.        |
+//| Trades the Ptr indicator set. InpEntryMode selects between the    |
+//| confirmed main system (MegaTrend HMA48/78 cross plus Yellow and   |
+//| Green both aligned past White) and the client's simpler alternate |
+//| idea (Yellow crossing White alone, no MegaTrend, no Green). See   |
+//| README.md for exactly what's confirmed vs still being tried.      |
 //|                                                                    |
 //| InpExitMode is left as a switch — client explicitly wants this    |
 //| decided later, in the EA's own Properties, no rebuild needed.     |
@@ -15,7 +17,8 @@
 enum ENUM_ENTRY_MODE
 {
    ENTRY_MEGA_ONLY,        // MegaTrend flip alone triggers entry
-   ENTRY_MEGA_PLUS_BANDS   // MegaTrend flip + Yellow AND Green each crossing White
+   ENTRY_MEGA_PLUS_BANDS,  // MegaTrend flip + Yellow AND Green both aligned past White
+   ENTRY_YELLOW_ONLY       // Yellow crossing White alone, no MegaTrend, no Green — client's alternate idea
 };
 
 enum ENUM_MEGA_TRIGGER
@@ -180,6 +183,29 @@ double BandCenterValue(string indName, int halfLength, int shift)
 double YellowValue(int shift) { return BandCenterValue(IND_YELLOW, InpYellowHalfLength, shift); }
 double GreenValue(int shift)  { return BandCenterValue(IND_GREEN, InpGreenHalfLength, shift); }
 
+//--- ENTRY_YELLOW_ONLY: client's alternate idea — Yellow crossing White is the
+//    entry trigger on its own, a discrete cross event (this is the primary
+//    signal here, not a slow confirmation layered on something else, so a
+//    real cross moment is the right check, same as his "Yellow confirmed
+//    cross" chart annotation marks a specific bar, not an ongoing state).
+int YellowCrossDir(int shift)
+{
+   double yellowNow  = YellowValue(shift);
+   double yellowPrev = YellowValue(shift + 1);
+   double whiteNow   = WhiteValue(shift);
+   double whitePrev  = WhiteValue(shift + 1);
+
+   if(yellowNow == EMPTY_VALUE || yellowPrev == EMPTY_VALUE ||
+      whiteNow == EMPTY_VALUE || whitePrev == EMPTY_VALUE) return 0;
+
+   bool wasAbove = yellowPrev > whitePrev;
+   bool isAbove  = yellowNow  > whiteNow;
+
+   if(isAbove && !wasAbove) return 1;    // Yellow crossed up through White
+   if(!isAbove && wasAbove) return -1;   // Yellow crossed down through White
+   return 0;
+}
+
 //--- Confirmed by client: "we only want to see both yellow/green have
 //    crossed the White Dotted line." Tested as a discrete cross event for
 //    each band independently first — over a full year of EURCHF H4 that
@@ -308,20 +334,26 @@ void OnTick()
       //--- fall through: this same closed bar can also start a new signal below
    }
 
-   //--- 2) Fresh MegaTrend flip on the bar that just closed (shift=1)
-   int megaDir = MegaSignalDir(1);
-   if(megaDir != 0 && (!g_pending.active || g_pending.dir != megaDir))
+   //--- 2) Fresh signal on the bar that just closed (shift=1) — source
+   //    depends on entry mode: MegaTrend for the two Mega-based modes,
+   //    or Yellow crossing White directly for the client's alternate idea.
+   int signalDir = (InpEntryMode == ENTRY_YELLOW_ONLY) ? YellowCrossDir(1) : MegaSignalDir(1);
+
+   if(signalDir != 0 && (!g_pending.active || g_pending.dir != signalDir))
    {
       g_pending.Reset();
       g_pending.active    = true;
-      g_pending.confirmed = (InpEntryMode == ENTRY_MEGA_ONLY);
-      g_pending.dir       = megaDir;
+      g_pending.confirmed = (InpEntryMode == ENTRY_MEGA_ONLY || InpEntryMode == ENTRY_YELLOW_ONLY);
+      g_pending.dir       = signalDir;
 
-      Print("[Signal] MegaTrend ", megaDir > 0 ? "BUY" : "SELL",
-            InpEntryMode == ENTRY_MEGA_ONLY
-               ? " — executing next open."
-               : " — waiting up to " + IntegerToString(InpConfirmTimeoutBars) +
-                 " bars for Yellow and Green to align past White.");
+      if(InpEntryMode == ENTRY_YELLOW_ONLY)
+         Print("[Signal] Yellow crossed White, ", signalDir > 0 ? "BUY" : "SELL", " — executing next open.");
+      else
+         Print("[Signal] MegaTrend ", signalDir > 0 ? "BUY" : "SELL",
+               InpEntryMode == ENTRY_MEGA_ONLY
+                  ? " — executing next open."
+                  : " — waiting up to " + IntegerToString(InpConfirmTimeoutBars) +
+                    " bars for Yellow and Green to align past White.");
    }
 
    //--- 3) Still waiting on confirmation — checked as a state each bar:

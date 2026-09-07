@@ -13,14 +13,14 @@ An automated Expert Advisor (EA) developed for **MetaTrader 4 (MQL4)**, built ar
 
 The EA is designed with switchable inputs for strategy variants rather than hardcoded assumptions, allowing full configuration without needing code recompilations.
 
-## Noted for later — client's alternate idea (not yet built)
+## Client's alternate idea — now built as a third entry mode
 
 Client's own words: *"Eliminate completely the MegaTrend and arrow lines and the
 stochastic completely and ONLY USE YELLOW CROSSES OF WHITE DOTTED LINE. Also forget
-about the GREEN line."* A much simpler alternative signal — Yellow crossing White is
-the entry trigger on its own, no MegaTrend, no Green, nothing else involved. Explicitly
-described as an idea to keep in mind for testing later, not a request to switch the
-current build. Confirmed received and written down here so it isn't lost.
+about the GREEN line."* Followed up with a real chart example (GBP/CHF H1, marked
+"Yellow confirmed cross") showing it in action. Built as `ENTRY_YELLOW_ONLY` — see
+Strategy Rules below. Not the default, `ENTRY_MEGA_PLUS_BANDS` still is, but it's a
+real switch now, not just a note, ready to test whenever the client wants.
 
 Also confirmed with the client directly: there is no real Stochastic calculation
 anywhere in this strategy (see the MegaTrend Trigger section below) — the "Stochastic
@@ -57,6 +57,7 @@ Client's own words: *"We do not care about any crosses of Green/Yellow by themse
 at all. We only want to see both yellow/green have crossed the White Dotted line."*
 * `ENTRY_MEGA_PLUS_BANDS` *(Default, confirmed)*: MegaTrend crosses, AND Yellow and Green are both on the far side of White (in the signal direction) within `InpConfirmTimeoutBars` bars (default: 3). Checked as a state (Yellow > White and Green > White for a buy), not a discrete cross event for each — tested the discrete-event version first over a full year of EURCHF H4, it produced 0 trades because Green (half length 40) is roughly twice as slow as Yellow (half length 21) and essentially never crosses within the same short window Yellow does. The state check matches how this reads on a chart at a glance and isn't fragile to that speed gap.
 * `ENTRY_MEGA_ONLY`: MegaTrend cross alone, no band confirmation. Kept as a switch, not the confirmed behavior.
+* `ENTRY_YELLOW_ONLY`: Client's alternate idea. Yellow crossing White is the entry trigger on its own — a discrete cross event (checked with `YellowCrossDir`), not a state, since here it's the primary signal rather than a slow confirmation layered on something else. No MegaTrend, no Green, `InpMegaTrigger` and `InpConfirmTimeoutBars` don't apply in this mode. Not the default, ready to test.
 
 ### 2. MegaTrend Trigger (`InpMegaTrigger`) — CONFIRMED
 Client's settings sheet, in his own words: *"We do not wait for arrows, but we take
