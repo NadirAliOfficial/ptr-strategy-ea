@@ -13,6 +13,20 @@ An automated Expert Advisor (EA) developed for **MetaTrader 4 (MQL4)**, built ar
 
 The EA is designed with switchable inputs for strategy variants rather than hardcoded assumptions, allowing full configuration without needing code recompilations.
 
+## Noted for later — client's alternate idea (not yet built)
+
+Client's own words: *"Eliminate completely the MegaTrend and arrow lines and the
+stochastic completely and ONLY USE YELLOW CROSSES OF WHITE DOTTED LINE. Also forget
+about the GREEN line."* A much simpler alternative signal — Yellow crossing White is
+the entry trigger on its own, no MegaTrend, no Green, nothing else involved. Explicitly
+described as an idea to keep in mind for testing later, not a request to switch the
+current build. Confirmed received and written down here so it isn't lost.
+
+Also confirmed with the client directly: there is no real Stochastic calculation
+anywhere in this strategy (see the MegaTrend Trigger section below) — the "Stochastic
+90/10 levels" are purely the visual reference lines the MegaTrend arrows are drawn
+against on his chart, not a value the code computes or compares against HMA.
+
 ---
 
 ## Indicator Suite Specifications
