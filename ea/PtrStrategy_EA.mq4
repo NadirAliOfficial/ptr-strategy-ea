@@ -162,15 +162,23 @@ int MegaSignalDir(int shift)
 }
 
 //+------------------------------------------------------------------+
-//| Center-line helpers — White's own center TMA (buffer 0), and      |
-//| Yellow/Green's own center TMA (also buffer 0 in those files)      |
+//| White's bands — buffer 0 (the center TMA) is colour1=clrNONE in   |
+//| the source, it is never drawn, there is no visible middle line.   |
+//| Only buffer 3 (upper) and buffer 4 (lower) are actually white and |
+//| visible on the client's chart — those are "White Dotted Line".   |
 //+------------------------------------------------------------------+
-double WhiteValue(int shift)
+double WhiteUpperValue(int shift)
 {
    // White Ptr Arslan's own enPrices enum isn't visible here, pr_weighted
    // is position 6 in that file's enum (pr_close=0 ... pr_weighted=6)
    return iCustom(NULL, 0, IND_WHITE, InpWhiteHalfLength, 6,
-                  InpWhitePeriod, InpWhiteMultiplier, 0, shift);
+                  InpWhitePeriod, InpWhiteMultiplier, 3, shift);
+}
+
+double WhiteLowerValue(int shift)
+{
+   return iCustom(NULL, 0, IND_WHITE, InpWhiteHalfLength, 6,
+                  InpWhitePeriod, InpWhiteMultiplier, 4, shift);
 }
 
 double BandCenterValue(string indName, int halfLength, int shift)
@@ -183,50 +191,63 @@ double BandCenterValue(string indName, int halfLength, int shift)
 double YellowValue(int shift) { return BandCenterValue(IND_YELLOW, InpYellowHalfLength, shift); }
 double GreenValue(int shift)  { return BandCenterValue(IND_GREEN, InpGreenHalfLength, shift); }
 
-//--- ENTRY_YELLOW_ONLY: client's alternate idea — Yellow crossing White is the
-//    entry trigger on its own, a discrete cross event (this is the primary
-//    signal here, not a slow confirmation layered on something else, so a
-//    real cross moment is the right check, same as his "Yellow confirmed
-//    cross" chart annotation marks a specific bar, not an ongoing state).
+//--- ENTRY_YELLOW_ONLY: client's alternate idea — Yellow crossing White is
+//    the entry trigger on its own, a discrete cross event. Confirmed by the
+//    client directly: crossing below the LOWER white band is a BUY, crossing
+//    above the UPPER white band is a SELL (opposite of a simple midline
+//    cross — there is no visible midline at all, see WhiteUpperValue above).
 int YellowCrossDir(int shift)
 {
    double yellowNow  = YellowValue(shift);
    double yellowPrev = YellowValue(shift + 1);
-   double whiteNow   = WhiteValue(shift);
-   double whitePrev  = WhiteValue(shift + 1);
+   double lowerNow   = WhiteLowerValue(shift);
+   double lowerPrev  = WhiteLowerValue(shift + 1);
+   double upperNow   = WhiteUpperValue(shift);
+   double upperPrev  = WhiteUpperValue(shift + 1);
 
    if(yellowNow == EMPTY_VALUE || yellowPrev == EMPTY_VALUE ||
-      whiteNow == EMPTY_VALUE || whitePrev == EMPTY_VALUE) return 0;
+      lowerNow == EMPTY_VALUE || lowerPrev == EMPTY_VALUE ||
+      upperNow == EMPTY_VALUE || upperPrev == EMPTY_VALUE) return 0;
 
-   bool wasAbove = yellowPrev > whitePrev;
-   bool isAbove  = yellowNow  > whiteNow;
+   bool wasBelowLower = yellowPrev < lowerPrev;
+   bool isBelowLower  = yellowNow  < lowerNow;
+   if(isBelowLower && !wasBelowLower) return 1;    // crossed down through lower band — BUY
 
-   if(isAbove && !wasAbove) return 1;    // Yellow crossed up through White
-   if(!isAbove && wasAbove) return -1;   // Yellow crossed down through White
+   bool wasAboveUpper = yellowPrev > upperPrev;
+   bool isAboveUpper  = yellowNow  > upperNow;
+   if(isAboveUpper && !wasAboveUpper) return -1;   // crossed up through upper band — SELL
+
    return 0;
 }
 
 //--- Confirmed by client: "we only want to see both yellow/green have
-//    crossed the White Dotted line." Tested as a discrete cross event for
-//    each band independently first — over a full year of EURCHF H4 that
-//    produced 0 trades, since Green (half length 40) is roughly twice as
-//    slow as Yellow (half length 21) and essentially never crosses within
-//    the same few-bar window Yellow does. Switched to a state check
-//    instead: at the time of the signal, is Yellow on the far side of
-//    White, AND is Green also on the far side of White. Matches how this
-//    reads on a chart at a glance, and isn't fragile to the speed gap
-//    between the two bands.
+//    crossed the White Dotted line," specifically the lower band for buys,
+//    upper band for sells (there is no visible midline, see above). Tested
+//    as a discrete cross event for each band independently first — over a
+//    full year of EURCHF H4 that produced 0 trades, since Green (half
+//    length 40) is roughly twice as slow as Yellow (half length 21) and
+//    essentially never crosses within the same few-bar window Yellow does.
+//    Switched to a state check instead: at the time of the signal, are
+//    Yellow and Green both beyond the relevant band already.
 bool BandsAlignedAt(int dir, int shift)
 {
    double yellowNow = YellowValue(shift);
    double greenNow  = GreenValue(shift);
-   double whiteNow  = WhiteValue(shift);
 
-   if(yellowNow == EMPTY_VALUE || greenNow == EMPTY_VALUE || whiteNow == EMPTY_VALUE)
-      return false;
+   if(yellowNow == EMPTY_VALUE || greenNow == EMPTY_VALUE) return false;
 
-   if(dir > 0) return (yellowNow > whiteNow && greenNow > whiteNow);
-   if(dir < 0) return (yellowNow < whiteNow && greenNow < whiteNow);
+   if(dir > 0)
+   {
+      double lowerNow = WhiteLowerValue(shift);
+      if(lowerNow == EMPTY_VALUE) return false;
+      return (yellowNow < lowerNow && greenNow < lowerNow);
+   }
+   if(dir < 0)
+   {
+      double upperNow = WhiteUpperValue(shift);
+      if(upperNow == EMPTY_VALUE) return false;
+      return (yellowNow > upperNow && greenNow > upperNow);
+   }
    return false;
 }
 
