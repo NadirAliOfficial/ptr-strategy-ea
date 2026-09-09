@@ -55,6 +55,7 @@ input int    InpStochDPeriod2      = 5;       // %D period
 input int    InpStochSlowing2      = 10;      // Slowing
 input double InpStochZoneUpper     = 90;      // Sell zone: Stochastic at/above this
 input double InpStochZoneLower     = 10;      // Buy zone: Stochastic at/below this
+input int    InpStochZoneLookback  = 10;      // Bars to look back for the zone touch, not just the current bar
 
 //+------------------------------------------------------------------+
 //| Inputs — indicator settings, confirmed from client's settings sheet|
@@ -220,16 +221,28 @@ bool HmaExtendedEnough(int dir, int shift)
 //    needed. Client's own words: using Stochastic alone fires too early,
 //    so this is only checked as an extra AND condition on top of the
 //    existing MegaTrend/band system, not a replacement for it.
+//
+//    Tested same-bar first: a bullish HMA48/78 crossover only prints after
+//    price has already risen for several bars, which pushes Stochastic up,
+//    not down to oversold — the two conditions can never be true on the
+//    same bar by construction, confirmed on real data (0/52 passed).
+//    Fixed to look back InpStochZoneLookback bars instead of just the
+//    current one, matching the confirmation-window pattern already used
+//    for Yellow/Green — Stochastic hitting the zone shortly before the
+//    crossover is what actually happens on a real reversal.
 bool RealStochInZone(int dir, int shift)
 {
    if(!InpUseRealStochFilter) return true;
 
-   double k = iStochastic(NULL, 0, InpStochKPeriod2, InpStochDPeriod2, InpStochSlowing2,
-                          MODE_SMA, 0, MODE_MAIN, shift);
-   if(k == EMPTY_VALUE) return false;
+   for(int i = shift; i < shift + InpStochZoneLookback; i++)
+   {
+      double k = iStochastic(NULL, 0, InpStochKPeriod2, InpStochDPeriod2, InpStochSlowing2,
+                             MODE_SMA, 0, MODE_MAIN, i);
+      if(k == EMPTY_VALUE) continue;
 
-   if(dir > 0) return (k <= InpStochZoneLower);
-   if(dir < 0) return (k >= InpStochZoneUpper);
+      if(dir > 0 && k <= InpStochZoneLower) return true;
+      if(dir < 0 && k >= InpStochZoneUpper) return true;
+   }
    return false;
 }
 
