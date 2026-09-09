@@ -79,6 +79,22 @@ bars' range, as an actual 0-100 number. When on, a MegaTrend cross only counts i
 that reading is below `InpHmaStochLowerLevel` (buy) or above `InpHmaStochUpperLevel`
 (sell).
 
+Client's later chart showed a genuine, real MT4 Stochastic (32,5,10) plotted alongside
+MegaTrend, not just visual reference lines like the earlier example. `InpUseRealStochFilter`
+(off by default) checks the actual built in Stochastic against `InpStochZoneLower`/`InpStochZoneUpper`
+as a real AND condition on top of the MegaTrend cross — client's own words, using
+Stochastic alone fires too early, so this only tightens the existing system, it does
+not replace it.
+
+**Known limitation, confirmed with real debug data:** Yellow (half length 21, a
+smoothed ~42-bar triangular filter) mathematically cannot reach White's outer bands
+(±2.8×ATR(100) from center) — over 6,078 bars of GBPCHF H1, price pierced those bands
+133 times, Yellow never once got closer than 16 pips to either one. `ENTRY_YELLOW_ONLY`
+and the outer-band confirmation in `ENTRY_MEGA_PLUS_BANDS` are both currently unfireable
+as a result — this is a real structural mismatch between Yellow's smoothing and White's
+band width, not a code bug. Needs a decision from the client: loosen White's multiplier,
+or drop the requirement that it be the *outer* band specifically.
+
 ### 3. Exit Method (`InpExitMode`) — left open by the client
 Client's own words: *"I will study harder later... leave this open... set it in properties at a later date."*
 * `EXIT_FIXED_PIPS` *(Default)*: Fixed SL/TP in pips (`InpTakeProfitPips`, `InpStopLossPips`), 3/5-digit broker point normalization.
