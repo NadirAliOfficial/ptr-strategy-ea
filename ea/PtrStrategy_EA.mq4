@@ -48,6 +48,14 @@ input int    InpHmaStochPeriod     = 14;      // Lookback bars for the HMA's own
 input double InpHmaStochLowerLevel = 10;      // Buy only if HMA %K is below this
 input double InpHmaStochUpperLevel = 90;      // Sell only if HMA %K is above this
 
+input group "=== Real Stochastic zone filter (optional) ==="
+input bool   InpUseRealStochFilter = false;   // Require an actual price Stochastic in the zone too
+input int    InpStochKPeriod2      = 32;      // %K period, per client's chart (32,5,10)
+input int    InpStochDPeriod2      = 5;       // %D period
+input int    InpStochSlowing2      = 10;      // Slowing
+input double InpStochZoneUpper     = 90;      // Sell zone: Stochastic at/above this
+input double InpStochZoneLower     = 10;      // Buy zone: Stochastic at/below this
+
 //+------------------------------------------------------------------+
 //| Inputs — indicator settings, confirmed from client's settings sheet|
 //+------------------------------------------------------------------+
@@ -203,6 +211,25 @@ bool HmaExtendedEnough(int dir, int shift)
 
    if(dir > 0) return (k < InpHmaStochLowerLevel);
    if(dir < 0) return (k > InpHmaStochUpperLevel);
+   return false;
+}
+
+//--- Client's latest chart shows a genuine, real MT4 Stochastic (32,5,10),
+//    unlike the earlier "90/10 levels" which turned out to just be visual
+//    reference lines. This is the real thing, built in, no custom file
+//    needed. Client's own words: using Stochastic alone fires too early,
+//    so this is only checked as an extra AND condition on top of the
+//    existing MegaTrend/band system, not a replacement for it.
+bool RealStochInZone(int dir, int shift)
+{
+   if(!InpUseRealStochFilter) return true;
+
+   double k = iStochastic(NULL, 0, InpStochKPeriod2, InpStochDPeriod2, InpStochSlowing2,
+                          MODE_SMA, 0, MODE_MAIN, shift);
+   if(k == EMPTY_VALUE) return false;
+
+   if(dir > 0) return (k <= InpStochZoneLower);
+   if(dir < 0) return (k >= InpStochZoneUpper);
    return false;
 }
 
@@ -410,6 +437,12 @@ void OnTick()
    {
       Print("[Signal] MegaTrend ", signalDir > 0 ? "BUY" : "SELL",
             " ignored — HMA not extended enough (InpUseHmaStochFilter).");
+      signalDir = 0;
+   }
+   if(signalDir != 0 && InpEntryMode != ENTRY_YELLOW_ONLY && !RealStochInZone(signalDir, 1))
+   {
+      Print("[Signal] MegaTrend ", signalDir > 0 ? "BUY" : "SELL",
+            " ignored — Stochastic not in zone (InpUseRealStochFilter).");
       signalDir = 0;
    }
 
