@@ -57,6 +57,11 @@ input double InpStochZoneUpper     = 90;      // Sell zone: Stochastic at/above 
 input double InpStochZoneLower     = 10;      // Buy zone: Stochastic at/below this
 input int    InpStochZoneLookback  = 10;      // Bars to look back for the zone touch, not just the current bar
 
+input group "=== Divergence filter (optional) ==="
+input bool   InpUseDivergenceFilter = false;   // Require price/Stochastic divergence at the two most recent swings
+input int    InpDivergenceSwingBars = 3;       // Bars each side to confirm a swing point
+input int    InpDivergenceLookback  = 40;      // Bars to search back for the two swings
+
 //+------------------------------------------------------------------+
 //| Inputs — indicator settings, confirmed from client's settings sheet|
 //+------------------------------------------------------------------+
@@ -243,6 +248,99 @@ bool RealStochInZone(int dir, int shift)
       if(dir > 0 && k <= InpStochZoneLower) return true;
       if(dir < 0 && k >= InpStochZoneUpper) return true;
    }
+   return false;
+}
+
+//--- Divergence — what the client has pointed at repeatedly on his charts.
+//    A swing point is a bar whose low (or high) is the most extreme among
+//    InpDivergenceSwingBars bars on each side. Bullish divergence: a more
+//    recent swing low is a LOWER price than an earlier one, while the
+//    Stochastic value at that more recent low is HIGHER than at the
+//    earlier one — price making a new low without momentum confirming it.
+//    Bearish divergence is the mirror image on swing highs.
+int FindSwingLow(int startShift, int endShift)
+{
+   for(int i = startShift; i <= endShift; i++)
+   {
+      double lowI = iLow(NULL, 0, i);
+      bool isSwing = true;
+      for(int j = 1; j <= InpDivergenceSwingBars; j++)
+      {
+         if(i - j < 0) { isSwing = false; break; }
+         if(iLow(NULL, 0, i - j) < lowI || iLow(NULL, 0, i + j) < lowI)
+         {
+            isSwing = false;
+            break;
+         }
+      }
+      if(isSwing) return i;
+   }
+   return -1;
+}
+
+int FindSwingHigh(int startShift, int endShift)
+{
+   for(int i = startShift; i <= endShift; i++)
+   {
+      double highI = iHigh(NULL, 0, i);
+      bool isSwing = true;
+      for(int j = 1; j <= InpDivergenceSwingBars; j++)
+      {
+         if(i - j < 0) { isSwing = false; break; }
+         if(iHigh(NULL, 0, i - j) > highI || iHigh(NULL, 0, i + j) > highI)
+         {
+            isSwing = false;
+            break;
+         }
+      }
+      if(isSwing) return i;
+   }
+   return -1;
+}
+
+double StochAt(int shift)
+{
+   return iStochastic(NULL, 0, InpStochKPeriod2, InpStochDPeriod2, InpStochSlowing2,
+                      MODE_SMA, 0, MODE_MAIN, shift);
+}
+
+bool BullishDivergence(int shift)
+{
+   int swingOld = FindSwingLow(shift + InpDivergenceSwingBars, shift + InpDivergenceLookback);
+   if(swingOld < 0) return false;
+   int swingNew = FindSwingLow(shift, swingOld - InpDivergenceSwingBars - 1);
+   if(swingNew < 0) return false;
+
+   double priceOld = iLow(NULL, 0, swingOld);
+   double priceNew = iLow(NULL, 0, swingNew);
+   double stochOld = StochAt(swingOld);
+   double stochNew = StochAt(swingNew);
+   if(stochOld == EMPTY_VALUE || stochNew == EMPTY_VALUE) return false;
+
+   return (priceNew < priceOld && stochNew > stochOld);
+}
+
+bool BearishDivergence(int shift)
+{
+   int swingOld = FindSwingHigh(shift + InpDivergenceSwingBars, shift + InpDivergenceLookback);
+   if(swingOld < 0) return false;
+   int swingNew = FindSwingHigh(shift, swingOld - InpDivergenceSwingBars - 1);
+   if(swingNew < 0) return false;
+
+   double priceOld = iHigh(NULL, 0, swingOld);
+   double priceNew = iHigh(NULL, 0, swingNew);
+   double stochOld = StochAt(swingOld);
+   double stochNew = StochAt(swingNew);
+   if(stochOld == EMPTY_VALUE || stochNew == EMPTY_VALUE) return false;
+
+   return (priceNew > priceOld && stochNew < stochOld);
+}
+
+bool DivergenceConfirmed(int dir, int shift)
+{
+   if(!InpUseDivergenceFilter) return true;
+   if(dir > 0) return BullishDivergence(shift);
+   if(dir < 0) return BearishDivergence(shift);
    return false;
 }
 
@@ -456,6 +554,12 @@ void OnTick()
    {
       Print("[Signal] MegaTrend ", signalDir > 0 ? "BUY" : "SELL",
             " ignored — Stochastic not in zone (InpUseRealStochFilter).");
+      signalDir = 0;
+   }
+   if(signalDir != 0 && !DivergenceConfirmed(signalDir, 1))
+   {
+      Print("[Signal] ", signalDir > 0 ? "BUY" : "SELL",
+            " ignored — no divergence (InpUseDivergenceFilter).");
       signalDir = 0;
    }
 
