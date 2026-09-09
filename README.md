@@ -38,7 +38,7 @@ All indicators are integrated via `iCustom()` matching exact source parameter or
 | `Ptr Mega Trend.mq4` | Primary trigger: HMA(48) crosses HMA(78) | Fast HMA `48`, Slow HMA `78`, Linear Weighted (`MODE_LWMA`), Close price | Buffer `2` (`HMA` line), called once per period |
 | `Yellow Ptr Arslan.mq4` | Confirmation: its center line crossing White | Half Length `21` (corrected from default 60), TimeFrame `60` (H1), Close price, Dev `1.8` | Buffer `0` (center TMA) |
 | `Norepaint zone 3 green.mq4` | Confirmation: its center line crossing White | Half Length `40`, TimeFrame `60` (H1), Close price, Dev `1.8` | Buffer `0` (center TMA) |
-| `White Ptr Arslan.mq4` | The line Yellow and Green must cross | Half Length `32`, Period `100`, Multiplier `2.8`, Weighted price | Buffer `0` (center TMA) |
+| `White Ptr Arslan.mq4` | The band Yellow and Green must cross | Half Length `32`, Period `100`, Multiplier `2.8`, Weighted price | Buffer `3` (upper, buy uses lower / sell uses upper) and `4` (lower). Buffer `0`, the center, is `color1=clrNONE` in the source — never drawn, no visible midline exists at all, confirmed directly by the client after an earlier version of this EA compared against that invisible line by mistake. |
 
 > **Note:** In MT4, indicator filenames must match `#define IND_...` in `PtrStrategy_EA.mq4` exactly:
 > - `#define IND_MEGA "Ptr Mega Trend"`
