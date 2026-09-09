@@ -69,6 +69,16 @@ misread of his chart screenshot.)
 * `MEGA_CROSS_48_78` *(Default, confirmed)*: The fast HMA(48) crosses the slow HMA(78).
 * `MEGA_SINGLE_FLIP`: A single HMA(48) direction flip. Kept as a switch, not the confirmed behavior.
 
+The client kept describing wanting the 48/78 cross to happen "at" the 90/10 zone,
+which isn't literally possible (HMA is a price value, it has no real position on a
+0-100 scale — those levels only appear because MT4 auto-scales two unrelated
+indicators into one shared window). The real, computable equivalent: `InpUseHmaStochFilter`
+(off by default) runs a standard %K formula against the HMA series itself instead of
+price — how far the current HMA value sits within its own last `InpHmaStochPeriod`
+bars' range, as an actual 0-100 number. When on, a MegaTrend cross only counts if
+that reading is below `InpHmaStochLowerLevel` (buy) or above `InpHmaStochUpperLevel`
+(sell).
+
 ### 3. Exit Method (`InpExitMode`) — left open by the client
 Client's own words: *"I will study harder later... leave this open... set it in properties at a later date."*
 * `EXIT_FIXED_PIPS` *(Default)*: Fixed SL/TP in pips (`InpTakeProfitPips`, `InpStopLossPips`), 3/5-digit broker point normalization.

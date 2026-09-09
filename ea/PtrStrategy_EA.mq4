@@ -42,6 +42,12 @@ input ENUM_MEGA_TRIGGER InpMegaTrigger       = MEGA_CROSS_48_78;        // "we t
 input ENUM_EXIT_MODE    InpExitMode          = EXIT_FIXED_PIPS;         // Left open by client, adjust in Properties
 input int               InpConfirmTimeoutBars = 3;      // Bars allowed for band confirm after a Mega flip
 
+input group "=== HMA extension filter (optional) ==="
+input bool   InpUseHmaStochFilter  = false;   // Require the fast HMA itself to be in an extreme zone
+input int    InpHmaStochPeriod     = 14;      // Lookback bars for the HMA's own high/low range
+input double InpHmaStochLowerLevel = 10;      // Buy only if HMA %K is below this
+input double InpHmaStochUpperLevel = 90;      // Sell only if HMA %K is above this
+
 //+------------------------------------------------------------------+
 //| Inputs — indicator settings, confirmed from client's settings sheet|
 //+------------------------------------------------------------------+
@@ -159,6 +165,45 @@ int MegaSignalDir(int shift)
       if(!isAbove && wasAbove) return -1;   // fast crossed below slow
       return 0;
    }
+}
+
+//--- Client described watching the MegaTrend lines against the chart's
+//    90/10 reference levels. Those levels only exist because MT4 auto
+//    scales two unrelated indicators sharing one window, there is no real
+//    relationship between HMA's price value and the number "10" or "90".
+//    A real, computable equivalent: run the standard %K formula (current
+//    minus the lowest of the last N, divided by the range of the last N)
+//    against the HMA series itself instead of price, so "the HMA is near
+//    the top/bottom of its own recent range" becomes an actual number.
+double HmaStochK(int period, int shift)
+{
+   double first = MegaHMA(period, shift);
+   if(first == EMPTY_VALUE) return EMPTY_VALUE;
+
+   double hi = first, lo = first;
+   for(int i = shift + 1; i < shift + InpHmaStochPeriod; i++)
+   {
+      double v = MegaHMA(period, i);
+      if(v == EMPTY_VALUE) return EMPTY_VALUE;
+      if(v > hi) hi = v;
+      if(v < lo) lo = v;
+   }
+   if(hi == lo) return EMPTY_VALUE;
+   return (first - lo) / (hi - lo) * 100.0;
+}
+
+//--- Gate for InpUseHmaStochFilter — true if the fast HMA is extended
+//    enough in the signal direction, or the filter is switched off.
+bool HmaExtendedEnough(int dir, int shift)
+{
+   if(!InpUseHmaStochFilter) return true;
+
+   double k = HmaStochK(InpMegaFastPeriod, shift);
+   if(k == EMPTY_VALUE) return false;
+
+   if(dir > 0) return (k < InpHmaStochLowerLevel);
+   if(dir < 0) return (k > InpHmaStochUpperLevel);
+   return false;
 }
 
 //+------------------------------------------------------------------+
@@ -358,7 +403,15 @@ void OnTick()
    //--- 2) Fresh signal on the bar that just closed (shift=1) — source
    //    depends on entry mode: MegaTrend for the two Mega-based modes,
    //    or Yellow crossing White directly for the client's alternate idea.
+   //    HmaExtendedEnough only applies to the MegaTrend-based modes, and
+   //    is a no-op (always true) when InpUseHmaStochFilter is off.
    int signalDir = (InpEntryMode == ENTRY_YELLOW_ONLY) ? YellowCrossDir(1) : MegaSignalDir(1);
+   if(signalDir != 0 && InpEntryMode != ENTRY_YELLOW_ONLY && !HmaExtendedEnough(signalDir, 1))
+   {
+      Print("[Signal] MegaTrend ", signalDir > 0 ? "BUY" : "SELL",
+            " ignored — HMA not extended enough (InpUseHmaStochFilter).");
+      signalDir = 0;
+   }
 
    if(signalDir != 0 && (!g_pending.active || g_pending.dir != signalDir))
    {
