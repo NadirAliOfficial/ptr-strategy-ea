@@ -1,0 +1,247 @@
+0	00:21:31.720	Expert PtrStrategy_EA EURCHF,H4: loaded successfully
+3	00:21:39.381	TestGenerator: no connect to trade server, default environment will be applied
+0	00:21:39.381	TestGenerator: spread set to 15
+1	00:21:41.413	TestGenerator: unmatched data error (high value 0.93370 at 2025.09.28 20:00 is not reached from the least timeframe, high price 0.93360 mismatches)
+1	00:21:41.413	TestGenerator: unmatched data error (low value 0.93290 at 2025.09.29 00:00 is not reached from the least timeframe, low price 0.93310 mismatches)
+1	00:21:41.413	TestGenerator: unmatched data error (high value 0.93400 at 2025.09.29 04:00 is not reached from the least timeframe, high price 0.93390 mismatches)
+1	00:21:41.413	TestGenerator: unmatched data error (low value 0.93230 at 2025.09.29 04:00 is not reached from the least timeframe, low price 0.93300 mismatches)
+1	00:21:41.413	TestGenerator: unmatched data error (high value 0.93590 at 2025.09.29 08:00 is not reached from the least timeframe, high price 0.93390 mismatches)
+1	00:21:41.413	TestGenerator: unmatched data error (low value 0.93420 at 2025.09.29 12:00 is not reached from the least timeframe, low price 0.93480 mismatches)
+1	00:21:41.413	TestGenerator: unmatched data error (high value 0.93540 at 2025.09.29 16:00 is not reached from the least timeframe, high price 0.93510 mismatches)
+1	00:21:41.413	TestGenerator: unmatched data error (high value 0.93560 at 2025.09.29 20:00 is not reached from the least timeframe, high price 0.93550 mismatches)
+1	00:21:41.413	TestGenerator: unmatched data error (low value 0.93380 at 2025.09.30 04:00 is not reached from the least timeframe, low price 0.93420 mismatches)
+1	00:21:41.413	TestGenerator: unmatched data error (high value 0.93710 at 2025.09.30 08:00 is not reached from the least timeframe, high price 0.93670 mismatches)
+1	00:21:41.413	TestGenerator: unmatched data error (low value 0.93370 at 2025.09.30 12:00 is not reached from the least timeframe, low price 0.93460 mismatches)
+1	00:21:41.413	TestGenerator: unmatched data error (high value 0.93480 at 2025.09.30 20:00 is not reached from the least timeframe, high price 0.93470 mismatches)
+1	00:21:41.413	TestGenerator: unmatched data error (low value 0.93390 at 2025.10.01 00:00 is not reached from the least timeframe, low price 0.93400 mismatches)
+1	00:21:41.413	TestGenerator: unmatched data error (low value 0.93300 at 2025.10.01 04:00 is not reached from the least timeframe, low price 0.93340 mismatches)
+1	00:21:41.413	TestGenerator: unmatched data error (high value 0.93690 at 2025.10.01 08:00 is not reached from the least timeframe, high price 0.93510 mismatches)
+1	00:21:41.413	TestGenerator: unmatched data error (low value 0.93540 at 2025.10.01 12:00 is not reached from the least timeframe, low price 0.93560 mismatches)
+1	00:21:41.413	TestGenerator: unmatched data error (low value 0.93440 at 2025.10.01 16:00 is not reached from the least timeframe, low price 0.93470 mismatches)
+1	00:21:41.413	TestGenerator: unmatched data error (high value 0.93530 at 2025.10.01 20:00 is not reached from the least timeframe, high price 0.93520 mismatches)
+1	00:21:41.415	TestGenerator: unmatched data error (high value 0.93630 at 2025.10.02 04:00 is not reached from the least timeframe, high price 0.93510 mismatches)
+1	00:21:41.415	TestGenerator: unmatched data error (low value 0.93420 at 2025.10.02 08:00 is not reached from the least timeframe, low price 0.93460 mismatches)
+1	00:21:41.415	TestGenerator: unmatched data error (low value 0.93410 at 2025.10.02 12:00 is not reached from the least timeframe, low price 0.93440 mismatches)
+1	00:21:41.415	TestGenerator: unmatched data error (high value 0.93550 at 2025.10.02 16:00 is not reached from the least timeframe, high price 0.93530 mismatches)
+1	00:21:41.415	TestGenerator: unmatched data error (low value 0.93400 at 2025.10.02 16:00 is not reached from the least timeframe, low price 0.93430 mismatches)
+1	00:21:41.415	TestGenerator: unmatched data error (high value 0.93540 at 2025.10.03 00:00 is not reached from the least timeframe, high price 0.93510 mismatches)
+1	00:21:41.415	TestGenerator: unmatched data error (high value 0.93540 at 2025.10.03 04:00 is not reached from the least timeframe, high price 0.93510 mismatches)
+1	00:21:41.415	TestGenerator: unmatched data error (low value 0.93420 at 2025.10.03 04:00 is not reached from the least timeframe, low price 0.93430 mismatches)
+1	00:21:41.415	TestGenerator: unmatched data error (low value 0.93380 at 2025.10.03 08:00 is not reached from the least timeframe, low price 0.93410 mismatches)
+1	00:21:41.415	TestGenerator: unmatched data error (high value 0.93520 at 2025.10.03 12:00 is not reached from the least timeframe, high price 0.93510 mismatches)
+1	00:21:41.415	TestGenerator: unmatched data error (low value 0.93310 at 2025.10.03 12:00 is not reached from the least timeframe, low price 0.93360 mismatches)
+1	00:21:41.415	TestGenerator: unmatched data error (high value 0.93440 at 2025.10.05 20:00 is not reached from the least timeframe, high price 0.93430 mismatches)
+1	00:21:41.415	TestGenerator: unmatched data error (low value 0.93240 at 2025.10.06 00:00 is not reached from the least timeframe, low price 0.93270 mismatches)
+1	00:21:41.415	TestGenerator: unmatched data error (high value 0.93390 at 2025.10.06 04:00 is not reached from the least timeframe, high price 0.93320 mismatches)
+1	00:21:41.415	TestGenerator: unmatched data error (low value 0.93130 at 2025.10.06 04:00 is not reached from the least timeframe, low price 0.93220 mismatches)
+1	00:21:41.415	TestGenerator: unmatched data error (low value 0.93070 at 2025.10.06 08:00 is not reached from the least timeframe, low price 0.93080 mismatches)
+1	00:21:41.415	TestGenerator: unmatched data error (high value 0.93250 at 2025.10.06 12:00 is not reached from the least timeframe, high price 0.93240 mismatches)
+1	00:21:41.415	TestGenerator: unmatched data error (low value 0.93070 at 2025.10.06 12:00 is not reached from the least timeframe, low price 0.93080 mismatches)
+1	00:21:41.415	TestGenerator: unmatched data error (high value 0.93170 at 2025.10.06 16:00 is not reached from the least timeframe, high price 0.93160 mismatches)
+1	00:21:41.415	TestGenerator: unmatched data error (low value 0.93050 at 2025.10.06 16:00 is not reached from the least timeframe, low price 0.93070 mismatches)
+1	00:21:41.415	TestGenerator: unmatched data error (high value 0.93120 at 2025.10.07 00:00 is not reached from the least timeframe, high price 0.93100 mismatches)
+1	00:21:41.415	TestGenerator: unmatched data error (high value 0.93130 at 2025.10.07 04:00 is not reached from the least timeframe, high price 0.93110 mismatches)
+1	00:21:41.415	TestGenerator: unmatched data error (high value 0.93140 at 2025.10.07 08:00 is not reached from the least timeframe, high price 0.93130 mismatches)
+1	00:21:41.415	TestGenerator: unmatched data error (low value 0.92950 at 2025.10.07 12:00 is not reached from the least timeframe, low price 0.92980 mismatches)
+1	00:21:41.415	TestGenerator: unmatched data error (low value 0.92970 at 2025.10.07 16:00 is not reached from the least timeframe, low price 0.92990 mismatches)
+1	00:21:41.415	TestGenerator: unmatched data error (high value 0.93080 at 2025.10.07 20:00 is not reached from the least timeframe, high price 0.93070 mismatches)
+1	00:21:41.415	TestGenerator: unmatched data error (high value 0.93180 at 2025.10.08 04:00 is not reached from the least timeframe, high price 0.93070 mismatches)
+1	00:21:41.415	TestGenerator: unmatched data error (low value 0.92970 at 2025.10.08 12:00 is not reached from the least timeframe, low price 0.92980 mismatches)
+1	00:21:41.415	TestGenerator: unmatched data error (high value 0.93230 at 2025.10.08 16:00 is not reached from the least timeframe, high price 0.93160 mismatches)
+1	00:21:41.415	TestGenerator: unmatched data error (high value 0.93290 at 2025.10.09 04:00 is not reached from the least timeframe, high price 0.93250 mismatches)
+1	00:21:41.415	TestGenerator: unmatched data error (low value 0.93140 at 2025.10.09 04:00 is not reached from the least timeframe, low price 0.93170 mismatches)
+1	00:21:41.415	TestGenerator: unmatched data error (low value 0.92960 at 2025.10.09 08:00 is not reached from the least timeframe, low price 0.93050 mismatches)
+1	00:21:41.415	TestGenerator: unmatched data error (high value 0.93300 at 2025.10.10 04:00 is not reached from the least timeframe, high price 0.93290 mismatches)
+1	00:21:41.415	TestGenerator: unmatched data error (low value 0.93140 at 2025.10.10 04:00 is not reached from the least timeframe, low price 0.93190 mismatches)
+1	00:21:41.415	TestGenerator: unmatched data error (low value 0.92970 at 2025.10.10 12:00 is not reached from the least timeframe, low price 0.93100 mismatches)
+1	00:21:41.415	TestGenerator: unmatched data error (high value 0.93100 at 2025.10.12 20:00 is not reached from the least timeframe, high price 0.93080 mismatches)
+1	00:21:41.415	TestGenerator: unmatched data error (high value 0.93140 at 2025.10.13 00:00 is not reached from the least timeframe, high price 0.93130 mismatches)
+1	00:21:41.415	TestGenerator: unmatched data error (high value 0.93130 at 2025.10.13 04:00 is not reached from the least timeframe, high price 0.93120 mismatches)
+1	00:21:41.415	TestGenerator: unmatched data error (low value 0.92970 at 2025.10.13 04:00 is not reached from the least timeframe, low price 0.93020 mismatches)
+1	00:21:41.415	TestGenerator: unmatched data error (low value 0.92980 at 2025.10.13 08:00 is not reached from the least timeframe, low price 0.93020 mismatches)
+1	00:21:41.415	TestGenerator: unmatched data error (high value 0.93160 at 2025.10.13 12:00 is not reached from the least timeframe, high price 0.93130 mismatches)
+1	00:21:41.415	TestGenerator: unmatched data error (low value 0.92970 at 2025.10.13 16:00 is not reached from the least timeframe, low price 0.92990 mismatches)
+1	00:21:41.415	TestGenerator: unmatched data error (high value 0.93050 at 2025.10.13 20:00 is not reached from the least timeframe, high price 0.93040 mismatches)
+1	00:21:41.415	TestGenerator: unmatched data error (high value 0.93090 at 2025.10.14 00:00 is not reached from the least timeframe, high price 0.93060 mismatches)
+1	00:21:41.415	TestGenerator: unmatched data error (low value 0.92820 at 2025.10.14 04:00 is not reached from the least timeframe, low price 0.92950 mismatches)
+1	00:21:41.415	TestGenerator: unmatched data error (high value 0.92950 at 2025.10.14 08:00 is not reached from the least timeframe, high price 0.92930 mismatches)
+1	00:21:41.415	TestGenerator: unmatched data error (high value 0.93050 at 2025.10.14 12:00 is not reached from the least timeframe, high price 0.93000 mismatches)
+1	00:21:41.415	TestGenerator: unmatched data error (high value 0.93000 at 2025.10.14 20:00 is not reached from the least timeframe, high price 0.92990 mismatches)
+1	00:21:41.415	TestGenerator: unmatched data error (low value 0.92930 at 2025.10.15 00:00 is not reached from the least timeframe, low price 0.92940 mismatches)
+1	00:21:41.415	TestGenerator: unmatched data error (high value 0.93050 at 2025.10.15 04:00 is not reached from the least timeframe, high price 0.92990 mismatches)
+1	00:21:41.415	TestGenerator: unmatched data error (low value 0.92900 at 2025.10.15 04:00 is not reached from the least timeframe, low price 0.92910 mismatches)
+1	00:21:41.415	TestGenerator: unmatched data error (low value 0.92960 at 2025.10.15 08:00 is not reached from the least timeframe, low price 0.92980 mismatches)
+1	00:21:41.415	TestGenerator: unmatched data error (low value 0.92650 at 2025.10.15 12:00 is not reached from the least timeframe, low price 0.92900 mismatches)
+1	00:21:41.415	TestGenerator: unmatched data error (low value 0.92570 at 2025.10.16 00:00 is not reached from the least timeframe, low price 0.92600 mismatches)
+1	00:21:41.415	TestGenerator: unmatched data error (high value 0.92870 at 2025.10.16 04:00 is not reached from the least timeframe, high price 0.92830 mismatches)
+1	00:21:41.415	TestGenerator: unmatched data error (high value 0.93050 at 2025.10.16 08:00 is not reached from the least timeframe, high price 0.92890 mismatches)
+1	00:21:41.415	TestGenerator: unmatched data error (low value 0.92760 at 2025.10.16 12:00 is not reached from the least timeframe, low price 0.92840 mismatches)
+1	00:21:41.415	TestGenerator: unmatched data error (low value 0.92610 at 2025.10.16 16:00 is not reached from the least timeframe, low price 0.92680 mismatches)
+1	00:21:41.415	TestGenerator: unmatched data error (low value 0.92580 at 2025.10.16 20:00 is not reached from the least timeframe, low price 0.92600 mismatches)
+1	00:21:41.415	TestGenerator: unmatched data error (low value 0.92480 at 2025.10.17 00:00 is not reached from the least timeframe, low price 0.92550 mismatches)
+1	00:21:41.415	TestGenerator: unmatched data error (low value 0.92170 at 2025.10.17 04:00 is not reached from the least timeframe, low price 0.92480 mismatches)
+1	00:21:41.415	TestGenerator: unmatched data error (high value 0.92550 at 2025.10.17 08:00 is not reached from the least timeframe, high price 0.92470 mismatches)
+1	00:21:41.415	TestGenerator: unmatched data error (high value 0.92550 at 2025.10.17 16:00 is not reached from the least timeframe, high price 0.92470 mismatches)
+1	00:21:41.415	TestGenerator: unmatched data error (high value 0.92550 at 2025.10.19 20:00 is not reached from the least timeframe, high price 0.92530 mismatches)
+1	00:21:41.415	TestGenerator: unmatched data error (high value 0.92590 at 2025.10.20 04:00 is not reached from the least timeframe, high price 0.92570 mismatches)
+1	00:21:41.415	TestGenerator: unmatched data error (low value 0.92450 at 2025.10.20 04:00 is not reached from the least timeframe, low price 0.92460 mismatches)
+1	00:21:41.415	TestGenerator: unmatched data error (low value 0.92320 at 2025.10.20 08:00 is not reached from the least timeframe, low price 0.92370 mismatches)
+1	00:21:41.415	TestGenerator: unmatched data error (low value 0.92110 at 2025.10.20 12:00 is not reached from the least timeframe, low price 0.92240 mismatches)
+1	00:21:41.415	TestGenerator: unmatched data error (low value 0.92170 at 2025.10.20 16:00 is not reached from the least timeframe, low price 0.92200 mismatches)
+1	00:21:41.415	TestGenerator: unmatched data error (low value 0.92060 at 2025.10.21 04:00 is not reached from the least timeframe, low price 0.92180 mismatches)
+1	00:21:41.415	TestGenerator: unmatched data error (high value 0.92350 at 2025.10.21 08:00 is not reached from the least timeframe, high price 0.92330 mismatches)
+1	00:21:41.415	TestGenerator: unmatched data error (low value 0.92180 at 2025.10.21 12:00 is not reached from the least timeframe, low price 0.92200 mismatches)
+1	00:21:41.415	TestGenerator: unmatched data error (high value 0.92430 at 2025.10.21 20:00 is not reached from the least timeframe, high price 0.92380 mismatches)
+1	00:21:41.415	TestGenerator: unmatched data error (low value 0.92280 at 2025.10.22 04:00 is not reached from the least timeframe, low price 0.92320 mismatches)
+1	00:21:41.415	TestGenerator: unmatched data error (low value 0.92170 at 2025.10.22 08:00 is not reached from the least timeframe, low price 0.92260 mismatches)
+1	00:21:41.415	TestGenerator: unmatched data error (high value 0.92430 at 2025.10.22 12:00 is not reached from the least timeframe, high price 0.92420 mismatches)
+1	00:21:41.415	TestGenerator: unmatched data error (high value 0.92470 at 2025.10.23 00:00 is not reached from the least timeframe, high price 0.92460 mismatches)
+1	00:21:41.415	TestGenerator: unmatched data error (high value 0.92530 at 2025.10.23 04:00 is not reached from the least timeframe, high price 0.92480 mismatches)
+1	00:21:41.415	TestGenerator: unmatched data error (low value 0.92390 at 2025.10.23 04:00 is not reached from the least timeframe, low price 0.92400 mismatches)
+1	00:21:41.415	TestGenerator: unmatched data error (high value 0.92540 at 2025.10.23 08:00 is not reached from the least timeframe, high price 0.92530 mismatches)
+1	00:21:41.415	TestGenerator: unmatched data error (low value 0.92310 at 2025.10.23 12:00 is not reached from the least timeframe, low price 0.92390 mismatches)
+1	00:21:41.415	TestGenerator: unmatched data error (high value 0.92400 at 2025.10.23 16:00 is not reached from the least timeframe, high price 0.92390 mismatches)
+1	00:21:41.436	TestGenerator: 1506 generating errors, logged 100 first error records
+2	00:21:41.436	1970.01.01 00:00:00  PtrStrategy_EA inputs: InpEntryMode=0; InpBandConfirmMode=3; InpYellowCrossMode=0; InpMegaTrigger=0; InpConfirmLookbackBars=8; InpConfirmTimeoutBars=5; InpMegaFastPeriod=48; InpMegaSlowPeriod=78; InpYellowHalfLength=21; InpYellowDev=1.8; InpGreenHalfLength=40; InpGreenDev=1.8; InpWhiteHalfLength=32; InpWhitePeriod=100; InpWhiteMultiplier=2.8; InpExitMode=0; InpLots=0.1; InpTakeProfitPips=50; InpStopLossPips=50; InpTrailingStopPips=0; InpMaxSpreadPoints=30; InpSlippage=10; InpMagicNumber=20260908; InpUseRealStochFilter=0; InpStochKPeriod=32; InpStochDPeriod=5; InpStochSlowing=10; InpStochZoneUpper=90; InpStochZoneLower=10; InpStochZoneLookback=10; InpUseHmaStochFilter=0; InpHmaStochPeriod=14; InpHmaStochLowerLevel=10; InpHmaStochUpperLevel=90; InpUseDivergenceFilter=0; InpDivergenceSwingBars=3; InpDivergenceLookback=40; InpShowOnChartDashboard=1; 
+0	00:21:41.459	2025.09.28 23:00:00  PtrStrategy_EA EURCHF,H4: [Init] PtrStrategy_EA v2.00 loaded | Symbol: EURCHF | Period: 240 | EntryMode: ENTRY_MEGA_PLUS_BANDS | BandConfirm: BAND_CONFIRM_ANY | ExitMode: EXIT_FIXED_PIPS
+0	00:21:41.670	2025.09.30 16:00:00  PtrStrategy_EA EURCHF,H4: [Signal] MegaTrend BUY cross WITH Band Confirmation satisfied -> executing at open!
+2	00:21:41.670	2025.09.30 16:00:00  PtrStrategy_EA EURCHF,H4: open #1 buy 0.10 EURCHF at 0.9362 sl: 0.9312 tp: 0.9412 ok
+0	00:21:41.670	2025.09.30 16:00:00  PtrStrategy_EA EURCHF,H4: [Trade] Executed BUY #1 at 0.93620 | SL: 0.93120 | TP: 0.94120 | Lots: 0.10
+0	00:21:41.707	2025.10.06 00:00:00  PtrStrategy_EA EURCHF,H4: [Signal] MegaTrend SELL cross detected. Waiting up to 5 bars for band alignment...
+0	00:21:41.713	2025.10.06 13:40:00  Tester: stop loss #1 at 0.9312 (0.9311 / 0.9326)
+0	00:21:41.716	2025.10.06 20:00:00  PtrStrategy_EA EURCHF,H4: [Signal] Pending SELL timed out after 5 bars without band confirmation. Resetting.
+0	00:21:41.767	2025.10.10 12:00:00  PtrStrategy_EA EURCHF,H4: [Signal] MegaTrend BUY cross WITH Band Confirmation satisfied -> executing at open!
+2	00:21:41.767	2025.10.10 12:00:00  PtrStrategy_EA EURCHF,H4: open #2 buy 0.10 EURCHF at 0.9337 sl: 0.9287 tp: 0.9387 ok
+0	00:21:41.767	2025.10.10 12:00:00  PtrStrategy_EA EURCHF,H4: [Trade] Executed BUY #2 at 0.93370 | SL: 0.92870 | TP: 0.93870 | Lots: 0.10
+0	00:21:41.780	2025.10.10 20:50:00  Tester: stop loss #2 at 0.9287 (0.9285 / 0.9300)
+0	00:21:41.809	2025.10.15 16:00:00  PtrStrategy_EA EURCHF,H4: [Signal] MegaTrend SELL cross detected. Waiting up to 5 bars for band alignment...
+0	00:21:41.817	2025.10.16 12:00:00  PtrStrategy_EA EURCHF,H4: [Signal] Pending SELL timed out after 5 bars without band confirmation. Resetting.
+0	00:21:41.890	2025.10.23 08:00:00  PtrStrategy_EA EURCHF,H4: [Signal] MegaTrend BUY cross detected. Waiting up to 5 bars for band alignment...
+0	00:21:41.895	2025.10.23 20:00:00  PtrStrategy_EA EURCHF,H4: [Signal] Band Confirmation received for pending BUY signal (3 bars elapsed)!
+2	00:21:41.895	2025.10.23 20:00:00  PtrStrategy_EA EURCHF,H4: open #3 buy 0.10 EURCHF at 0.9253 sl: 0.9203 tp: 0.9303 ok
+0	00:21:41.895	2025.10.23 20:00:00  PtrStrategy_EA EURCHF,H4: [Trade] Executed BUY #3 at 0.92530 | SL: 0.92030 | TP: 0.93030 | Lots: 0.10
+2	00:21:42.002	2025.11.03 13:40:00  Tester: take profit #3 at 0.9303 (0.9306 / 0.9321)
+0	00:21:42.051	2025.11.07 08:00:00  PtrStrategy_EA EURCHF,H4: [Signal] MegaTrend SELL cross detected. Waiting up to 5 bars for band alignment...
+0	00:21:42.061	2025.11.10 04:00:00  PtrStrategy_EA EURCHF,H4: [Signal] Pending SELL timed out after 5 bars without band confirmation. Resetting.
+0	00:21:42.161	2025.11.19 00:00:00  PtrStrategy_EA EURCHF,H4: [Signal] MegaTrend BUY cross detected. Waiting up to 5 bars for band alignment...
+0	00:21:42.163	2025.11.19 04:00:00  PtrStrategy_EA EURCHF,H4: [Signal] Band Confirmation received for pending BUY signal (1 bars elapsed)!
+2	00:21:42.163	2025.11.19 04:00:00  PtrStrategy_EA EURCHF,H4: open #4 buy 0.10 EURCHF at 0.9281 sl: 0.9231 tp: 0.9331 ok
+0	00:21:42.163	2025.11.19 04:00:00  PtrStrategy_EA EURCHF,H4: [Trade] Executed BUY #4 at 0.92810 | SL: 0.92310 | TP: 0.93310 | Lots: 0.10
+2	00:21:42.236	2025.11.25 09:20:59  Tester: take profit #4 at 0.9331 (0.9331 / 0.9346)
+0	00:21:42.259	2025.11.27 12:00:00  PtrStrategy_EA EURCHF,H4: [Signal] MegaTrend SELL cross detected. Waiting up to 5 bars for band alignment...
+0	00:21:42.269	2025.11.28 08:00:00  PtrStrategy_EA EURCHF,H4: [Signal] Pending SELL timed out after 5 bars without band confirmation. Resetting.
+0	00:21:42.332	2025.12.05 08:00:00  PtrStrategy_EA EURCHF,H4: [Signal] MegaTrend BUY cross detected. Waiting up to 5 bars for band alignment...
+0	00:21:42.342	2025.12.08 04:00:00  PtrStrategy_EA EURCHF,H4: [Signal] Pending BUY timed out after 5 bars without band confirmation. Resetting.
+0	00:21:42.380	2025.12.11 08:00:00  PtrStrategy_EA EURCHF,H4: [Signal] MegaTrend SELL cross detected. Waiting up to 5 bars for band alignment...
+0	00:21:42.388	2025.12.12 04:00:00  PtrStrategy_EA EURCHF,H4: [Signal] Pending SELL timed out after 5 bars without band confirmation. Resetting.
+0	00:21:42.452	2025.12.17 16:00:00  PtrStrategy_EA EURCHF,H4: [Signal] MegaTrend BUY cross WITH Band Confirmation satisfied -> executing at open!
+2	00:21:42.452	2025.12.17 16:00:00  PtrStrategy_EA EURCHF,H4: open #5 buy 0.10 EURCHF at 0.9352 sl: 0.9302 tp: 0.9402 ok
+0	00:21:42.452	2025.12.17 16:00:00  PtrStrategy_EA EURCHF,H4: [Trade] Executed BUY #5 at 0.93520 | SL: 0.93020 | TP: 0.94020 | Lots: 0.10
+0	00:21:42.471	2025.12.19 04:00:00  PtrStrategy_EA EURCHF,H4: [Signal] MegaTrend SELL cross detected. Waiting up to 5 bars for band alignment...
+0	00:21:42.478	2025.12.22 00:00:00  PtrStrategy_EA EURCHF,H4: [Signal] Pending SELL timed out after 5 bars without band confirmation. Resetting.
+0	00:21:42.493	2025.12.23 01:40:00  Tester: stop loss #5 at 0.9302 (0.9297 / 0.9312)
+0	00:21:42.534	2025.12.29 00:00:00  PtrStrategy_EA EURCHF,H4: [Signal] MegaTrend BUY cross detected. Waiting up to 5 bars for band alignment...
+0	00:21:42.548	2025.12.29 20:00:00  PtrStrategy_EA EURCHF,H4: [Signal] Pending BUY timed out after 5 bars without band confirmation. Resetting.
+0	00:21:42.608	2026.01.05 20:00:00  PtrStrategy_EA EURCHF,H4: [Signal] MegaTrend SELL cross detected. Waiting up to 5 bars for band alignment...
+0	00:21:42.618	2026.01.06 16:00:00  PtrStrategy_EA EURCHF,H4: [Signal] Pending SELL timed out after 5 bars without band confirmation. Resetting.
+0	00:21:42.635	2026.01.08 08:00:00  PtrStrategy_EA EURCHF,H4: [Signal] MegaTrend BUY cross WITH Band Confirmation satisfied -> executing at open!
+2	00:21:42.635	2026.01.08 08:00:00  PtrStrategy_EA EURCHF,H4: open #6 buy 0.10 EURCHF at 0.9327 sl: 0.9277 tp: 0.9377 ok
+0	00:21:42.635	2026.01.08 08:00:00  PtrStrategy_EA EURCHF,H4: [Trade] Executed BUY #6 at 0.93270 | SL: 0.92770 | TP: 0.93770 | Lots: 0.10
+0	00:21:42.693	2026.01.14 16:00:00  PtrStrategy_EA EURCHF,H4: [Signal] MegaTrend SELL cross WITH Band Confirmation satisfied -> executing at open!
+0	00:21:42.693	2026.01.14 16:00:00  PtrStrategy_EA EURCHF,H4: [Trade] Position already open in opposite direction (ticket #6). New entry skipped.
+0	00:21:42.729	2026.01.19 13:40:00  Tester: stop loss #6 at 0.9277 (0.9277 / 0.9292)
+0	00:21:42.781	2026.01.23 20:00:00  PtrStrategy_EA EURCHF,H4: [Signal] MegaTrend BUY cross WITH Band Confirmation satisfied -> executing at open!
+2	00:21:42.781	2026.01.23 20:00:00  PtrStrategy_EA EURCHF,H4: open #7 buy 0.10 EURCHF at 0.9258 sl: 0.9208 tp: 0.9308 ok
+0	00:21:42.781	2026.01.23 20:00:00  PtrStrategy_EA EURCHF,H4: [Trade] Executed BUY #7 at 0.92580 | SL: 0.92080 | TP: 0.93080 | Lots: 0.10
+0	00:21:42.787	2026.01.26 04:00:00  PtrStrategy_EA EURCHF,H4: [Signal] MegaTrend SELL cross detected. Waiting up to 5 bars for band alignment...
+0	00:21:42.792	2026.01.26 09:28:59  Tester: stop loss #7 at 0.9208 (0.9208 / 0.9223)
+0	00:21:42.802	2026.01.27 00:00:00  PtrStrategy_EA EURCHF,H4: [Signal] Pending SELL timed out after 5 bars without band confirmation. Resetting.
+0	00:21:42.868	2026.02.02 16:00:00  PtrStrategy_EA EURCHF,H4: [Signal] MegaTrend BUY cross detected. Waiting up to 5 bars for band alignment...
+0	00:21:42.876	2026.02.03 08:00:00  PtrStrategy_EA EURCHF,H4: [Signal] Band Confirmation received for pending BUY signal (4 bars elapsed)!
+2	00:21:42.876	2026.02.03 08:00:00  PtrStrategy_EA EURCHF,H4: open #8 buy 0.10 EURCHF at 0.9199 sl: 0.9149 tp: 0.9249 ok
+0	00:21:42.876	2026.02.03 08:00:00  PtrStrategy_EA EURCHF,H4: [Trade] Executed BUY #8 at 0.91990 | SL: 0.91490 | TP: 0.92490 | Lots: 0.10
+0	00:21:42.929	2026.02.09 13:40:00  Tester: stop loss #8 at 0.9149 (0.9129 / 0.9144)
+0	00:21:42.935	2026.02.10 00:00:00  PtrStrategy_EA EURCHF,H4: [Signal] MegaTrend SELL cross detected. Waiting up to 5 bars for band alignment...
+0	00:21:42.948	2026.02.10 20:00:00  PtrStrategy_EA EURCHF,H4: [Signal] Pending SELL timed out after 5 bars without band confirmation. Resetting.
+0	00:21:42.996	2026.02.13 20:00:00  PtrStrategy_EA EURCHF,H4: [Signal] MegaTrend BUY cross WITH Band Confirmation satisfied -> executing at open!
+2	00:21:42.996	2026.02.13 20:00:00  PtrStrategy_EA EURCHF,H4: open #9 buy 0.10 EURCHF at 0.9131 sl: 0.9081 tp: 0.9181 ok
+0	00:21:42.996	2026.02.13 20:00:00  PtrStrategy_EA EURCHF,H4: [Trade] Executed BUY #9 at 0.91310 | SL: 0.90810 | TP: 0.91810 | Lots: 0.10
+0	00:21:43.096	2026.02.26 12:00:00  PtrStrategy_EA EURCHF,H4: [Signal] MegaTrend SELL cross WITH Band Confirmation satisfied -> executing at open!
+0	00:21:43.096	2026.02.26 12:00:00  PtrStrategy_EA EURCHF,H4: [Trade] Position already open in opposite direction (ticket #9). New entry skipped.
+0	00:21:43.113	2026.02.27 13:40:00  Tester: stop loss #9 at 0.9081 (0.9079 / 0.9094)
+0	00:21:43.241	2026.03.11 12:00:00  PtrStrategy_EA EURCHF,H4: [Signal] MegaTrend BUY cross detected. Waiting up to 5 bars for band alignment...
+0	00:21:43.250	2026.03.12 08:00:00  PtrStrategy_EA EURCHF,H4: [Signal] Band Confirmation received for pending BUY signal (5 bars elapsed)!
+2	00:21:43.250	2026.03.12 08:00:00  PtrStrategy_EA EURCHF,H4: open #10 buy 0.10 EURCHF at 0.9046 sl: 0.8996 tp: 0.9096 ok
+0	00:21:43.250	2026.03.12 08:00:00  PtrStrategy_EA EURCHF,H4: [Trade] Executed BUY #10 at 0.90460 | SL: 0.89960 | TP: 0.90960 | Lots: 0.10
+2	00:21:43.333	2026.03.19 09:34:59  Tester: take profit #10 at 0.9096 (0.9096 / 0.9111)
+0	00:21:43.402	2026.03.26 12:00:00  PtrStrategy_EA EURCHF,H4: [Signal] MegaTrend SELL cross detected. Waiting up to 5 bars for band alignment...
+0	00:21:43.413	2026.03.27 08:00:00  PtrStrategy_EA EURCHF,H4: [Signal] Pending SELL timed out after 5 bars without band confirmation. Resetting.
+0	00:21:43.422	2026.03.30 04:00:00  PtrStrategy_EA EURCHF,H4: [Signal] MegaTrend BUY cross detected. Waiting up to 5 bars for band alignment...
+0	00:21:43.429	2026.03.30 16:00:00  PtrStrategy_EA EURCHF,H4: [Signal] MegaTrend SELL cross detected. Waiting up to 5 bars for band alignment...
+0	00:21:43.440	2026.03.31 12:00:00  PtrStrategy_EA EURCHF,H4: [Signal] Pending SELL timed out after 5 bars without band confirmation. Resetting.
+0	00:21:43.458	2026.04.01 08:00:00  PtrStrategy_EA EURCHF,H4: [Signal] MegaTrend BUY cross detected. Waiting up to 5 bars for band alignment...
+0	00:21:43.469	2026.04.01 20:00:00  PtrStrategy_EA EURCHF,H4: [Signal] MegaTrend SELL cross WITH Band Confirmation satisfied -> executing at open!
+2	00:21:43.469	2026.04.01 20:00:00  PtrStrategy_EA EURCHF,H4: open #11 sell 0.10 EURCHF at 0.9205 sl: 0.9255 tp: 0.9155 ok
+0	00:21:43.469	2026.04.01 20:00:00  PtrStrategy_EA EURCHF,H4: [Trade] Executed SELL #11 at 0.92050 | SL: 0.92550 | TP: 0.91550 | Lots: 0.10
+0	00:21:43.510	2026.04.07 09:40:00  Tester: stop loss #11 at 0.9255 (0.9241 / 0.9256)
+0	00:21:43.568	2026.04.12 23:00:00  PtrStrategy_EA EURCHF,H4: [Signal] MegaTrend BUY cross detected. Waiting up to 5 bars for band alignment...
+0	00:21:43.576	2026.04.13 16:00:00  PtrStrategy_EA EURCHF,H4: [Signal] MegaTrend SELL cross detected. Waiting up to 5 bars for band alignment...
+0	00:21:43.588	2026.04.14 12:00:00  PtrStrategy_EA EURCHF,H4: [Signal] Pending SELL timed out after 5 bars without band confirmation. Resetting.
+0	00:21:43.682	2026.04.24 08:00:00  PtrStrategy_EA EURCHF,H4: [Signal] MegaTrend BUY cross WITH Band Confirmation satisfied -> executing at open!
+2	00:21:43.682	2026.04.24 08:00:00  PtrStrategy_EA EURCHF,H4: open #12 buy 0.10 EURCHF at 0.9210 sl: 0.9160 tp: 0.9260 ok
+0	00:21:43.682	2026.04.24 08:00:00  PtrStrategy_EA EURCHF,H4: [Trade] Executed BUY #12 at 0.92100 | SL: 0.91600 | TP: 0.92600 | Lots: 0.10
+0	00:21:43.755	2026.05.01 08:00:00  PtrStrategy_EA EURCHF,H4: [Signal] MegaTrend SELL cross detected. Waiting up to 5 bars for band alignment...
+0	00:21:43.759	2026.05.01 20:31:59  Tester: stop loss #12 at 0.9160 (0.9160 / 0.9175)
+0	00:21:43.762	2026.05.04 08:00:00  PtrStrategy_EA EURCHF,H4: [Signal] Pending SELL timed out after 5 bars without band confirmation. Resetting.
+0	00:21:43.814	2026.05.08 08:00:00  PtrStrategy_EA EURCHF,H4: [Signal] MegaTrend BUY cross detected. Waiting up to 5 bars for band alignment...
+0	00:21:43.820	2026.05.11 00:00:00  PtrStrategy_EA EURCHF,H4: [Signal] Pending BUY timed out after 5 bars without band confirmation. Resetting.
+0	00:21:43.868	2026.05.15 16:00:00  PtrStrategy_EA EURCHF,H4: [Signal] MegaTrend SELL cross detected. Waiting up to 5 bars for band alignment...
+0	00:21:43.874	2026.05.18 08:00:00  PtrStrategy_EA EURCHF,H4: [Signal] Pending SELL timed out after 5 bars without band confirmation. Resetting.
+0	00:21:43.900	2026.05.20 12:00:00  PtrStrategy_EA EURCHF,H4: [Signal] MegaTrend BUY cross WITH Band Confirmation satisfied -> executing at open!
+2	00:21:43.900	2026.05.20 12:00:00  PtrStrategy_EA EURCHF,H4: open #13 buy 0.10 EURCHF at 0.9181 sl: 0.9131 tp: 0.9231 ok
+0	00:21:43.900	2026.05.20 12:00:00  PtrStrategy_EA EURCHF,H4: [Trade] Executed BUY #13 at 0.91810 | SL: 0.91310 | TP: 0.92310 | Lots: 0.10
+0	00:21:43.925	2026.05.22 05:40:00  Tester: stop loss #13 at 0.9131 (0.9126 / 0.9141)
+0	00:21:43.933	2026.05.22 20:00:00  PtrStrategy_EA EURCHF,H4: [Signal] MegaTrend SELL cross detected. Waiting up to 5 bars for band alignment...
+0	00:21:43.941	2026.05.25 12:00:00  PtrStrategy_EA EURCHF,H4: [Signal] Pending SELL timed out after 5 bars without band confirmation. Resetting.
+0	00:21:43.972	2026.05.27 16:00:00  PtrStrategy_EA EURCHF,H4: [Signal] MegaTrend BUY cross WITH Band Confirmation satisfied -> executing at open!
+2	00:21:43.972	2026.05.27 16:00:00  PtrStrategy_EA EURCHF,H4: open #14 buy 0.10 EURCHF at 0.9169 sl: 0.9119 tp: 0.9219 ok
+0	00:21:43.972	2026.05.27 16:00:00  PtrStrategy_EA EURCHF,H4: [Trade] Executed BUY #14 at 0.91690 | SL: 0.91190 | TP: 0.92190 | Lots: 0.10
+0	00:21:44.006	2026.05.29 09:40:00  Tester: stop loss #14 at 0.9119 (0.9109 / 0.9124)
+0	00:21:44.039	2026.06.02 12:00:00  PtrStrategy_EA EURCHF,H4: [Signal] MegaTrend SELL cross WITH Band Confirmation satisfied -> executing at open!
+2	00:21:44.039	2026.06.02 12:00:00  PtrStrategy_EA EURCHF,H4: open #15 sell 0.10 EURCHF at 0.9146 sl: 0.9196 tp: 0.9096 ok
+0	00:21:44.039	2026.06.02 12:00:00  PtrStrategy_EA EURCHF,H4: [Trade] Executed SELL #15 at 0.91460 | SL: 0.91960 | TP: 0.90960 | Lots: 0.10
+0	00:21:44.057	2026.06.03 00:00:00  PtrStrategy_EA EURCHF,H4: [Signal] MegaTrend BUY cross detected. Waiting up to 5 bars for band alignment...
+0	00:21:44.066	2026.06.03 16:29:59  Tester: stop loss #15 at 0.9196 (0.9181 / 0.9196)
+0	00:21:44.068	2026.06.03 20:00:00  PtrStrategy_EA EURCHF,H4: [Signal] Pending BUY timed out after 5 bars without band confirmation. Resetting.
+0	00:21:44.160	2026.06.12 16:00:00  PtrStrategy_EA EURCHF,H4: [Signal] MegaTrend SELL cross detected. Waiting up to 5 bars for band alignment...
+0	00:21:44.171	2026.06.15 08:00:00  PtrStrategy_EA EURCHF,H4: [Signal] Pending SELL timed out after 5 bars without band confirmation. Resetting.
+0	00:21:44.299	2026.06.19 16:00:00  PtrStrategy_EA EURCHF,H4: [Signal] MegaTrend BUY cross detected. Waiting up to 5 bars for band alignment...
+0	00:21:44.325	2026.06.22 08:00:00  PtrStrategy_EA EURCHF,H4: [Signal] Pending BUY timed out after 5 bars without band confirmation. Resetting.
+0	00:21:44.405	2026.06.24 16:00:00  PtrStrategy_EA EURCHF,H4: [Signal] MegaTrend SELL cross WITH Band Confirmation satisfied -> executing at open!
+2	00:21:44.405	2026.06.24 16:00:00  PtrStrategy_EA EURCHF,H4: open #16 sell 0.10 EURCHF at 0.9222 sl: 0.9272 tp: 0.9172 ok
+0	00:21:44.405	2026.06.24 16:00:00  PtrStrategy_EA EURCHF,H4: [Trade] Executed SELL #16 at 0.92220 | SL: 0.92720 | TP: 0.91720 | Lots: 0.10
+0	00:21:44.553	2026.06.30 16:00:00  PtrStrategy_EA EURCHF,H4: [Signal] MegaTrend BUY cross WITH Band Confirmation satisfied -> executing at open!
+0	00:21:44.553	2026.06.30 16:00:00  PtrStrategy_EA EURCHF,H4: [Trade] Position already open in opposite direction (ticket #16). New entry skipped.
+0	00:21:44.633	2026.07.03 00:00:00  PtrStrategy_EA EURCHF,H4: [Signal] MegaTrend SELL cross detected. Waiting up to 5 bars for band alignment...
+0	00:21:44.657	2026.07.03 20:00:00  PtrStrategy_EA EURCHF,H4: [Signal] Pending SELL timed out after 5 bars without band confirmation. Resetting.
+0	00:21:44.718	2026.07.07 20:00:00  PtrStrategy_EA EURCHF,H4: [Signal] MegaTrend BUY cross WITH Band Confirmation satisfied -> executing at open!
+0	00:21:44.718	2026.07.07 20:00:00  PtrStrategy_EA EURCHF,H4: [Trade] Position already open in opposite direction (ticket #16). New entry skipped.
+0	00:21:44.842	2026.07.13 12:19:11  Tester: stop loss #16 at 0.9272 (0.9262 / 0.9277)
+0	00:21:44.943	2026.07.16 12:00:00  PtrStrategy_EA EURCHF,H4: [Signal] MegaTrend SELL cross detected. Waiting up to 5 bars for band alignment...
+0	00:21:44.983	2026.07.17 08:00:00  PtrStrategy_EA EURCHF,H4: [Signal] Pending SELL timed out after 5 bars without band confirmation. Resetting.
+0	00:21:45.129	2026.07.22 12:00:00  PtrStrategy_EA EURCHF,H4: [Signal] MegaTrend BUY cross detected. Waiting up to 5 bars for band alignment...
+0	00:21:45.169	2026.07.23 08:00:00  PtrStrategy_EA EURCHF,H4: [Signal] Pending BUY timed out after 5 bars without band confirmation. Resetting.
+0	00:21:45.343	2026.07.30 00:00:00  PtrStrategy_EA EURCHF,H4: [Signal] MegaTrend SELL cross WITH Band Confirmation satisfied -> executing at open!
+2	00:21:45.343	2026.07.30 00:00:00  PtrStrategy_EA EURCHF,H4: open #17 sell 0.10 EURCHF at 0.9327 sl: 0.9377 tp: 0.9277 ok
+0	00:21:45.343	2026.07.30 00:00:00  PtrStrategy_EA EURCHF,H4: [Trade] Executed SELL #17 at 0.93270 | SL: 0.93770 | TP: 0.92770 | Lots: 0.10
+0	00:21:45.526	2026.08.06 00:00:00  PtrStrategy_EA EURCHF,H4: [Signal] MegaTrend BUY cross WITH Band Confirmation satisfied -> executing at open!
+0	00:21:45.526	2026.08.06 00:00:00  PtrStrategy_EA EURCHF,H4: [Trade] Position already open in opposite direction (ticket #17). New entry skipped.
+0	00:21:45.549	2026.08.06 12:19:11  Tester: stop loss #17 at 0.9377 (0.9365 / 0.9380)
+0	00:21:45.802	2026.08.19 04:00:00  PtrStrategy_EA EURCHF,H4: [Signal] MegaTrend SELL cross detected. Waiting up to 5 bars for band alignment...
+0	00:21:45.826	2026.08.20 00:00:00  PtrStrategy_EA EURCHF,H4: [Signal] Pending SELL timed out after 5 bars without band confirmation. Resetting.
+0	00:21:45.957	2026.08.25 20:00:00  PtrStrategy_EA EURCHF,H4: [Signal] MegaTrend BUY cross WITH Band Confirmation satisfied -> executing at open!
+2	00:21:45.957	2026.08.25 20:00:00  PtrStrategy_EA EURCHF,H4: open #18 buy 0.10 EURCHF at 0.9371 sl: 0.9321 tp: 0.9421 ok
+0	00:21:45.957	2026.08.25 20:00:00  PtrStrategy_EA EURCHF,H4: [Trade] Executed BUY #18 at 0.93710 | SL: 0.93210 | TP: 0.94210 | Lots: 0.10
+2	00:21:46.368	2026.09.02 04:03:49  Tester: take profit #18 at 0.9421 (0.9423 / 0.9438)
+0	00:21:46.569	2026.09.04 16:23:59  PtrStrategy_EA EURCHF,H4: [Signal] MegaTrend SELL cross detected. Waiting up to 5 bars for band alignment...
+0	00:21:46.580	EURCHF,H4: 23028 tick events (1492 bars, 23128 bar states) processed in 0:00:05.156 (total time 0:00:14.859)

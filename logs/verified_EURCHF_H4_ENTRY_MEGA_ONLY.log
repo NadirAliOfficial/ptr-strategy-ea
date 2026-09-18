@@ -1,0 +1,263 @@
+0	00:17:37.346	Expert PtrStrategy_EA EURCHF,H4: loaded successfully
+3	00:17:45.294	TestGenerator: no connect to trade server, default environment will be applied
+0	00:17:45.294	TestGenerator: spread set to 15
+1	00:17:47.334	TestGenerator: unmatched data error (high value 0.93370 at 2025.09.28 20:00 is not reached from the least timeframe, high price 0.93360 mismatches)
+1	00:17:47.334	TestGenerator: unmatched data error (low value 0.93290 at 2025.09.29 00:00 is not reached from the least timeframe, low price 0.93310 mismatches)
+1	00:17:47.334	TestGenerator: unmatched data error (high value 0.93400 at 2025.09.29 04:00 is not reached from the least timeframe, high price 0.93390 mismatches)
+1	00:17:47.334	TestGenerator: unmatched data error (low value 0.93230 at 2025.09.29 04:00 is not reached from the least timeframe, low price 0.93300 mismatches)
+1	00:17:47.334	TestGenerator: unmatched data error (high value 0.93590 at 2025.09.29 08:00 is not reached from the least timeframe, high price 0.93390 mismatches)
+1	00:17:47.334	TestGenerator: unmatched data error (low value 0.93420 at 2025.09.29 12:00 is not reached from the least timeframe, low price 0.93480 mismatches)
+1	00:17:47.334	TestGenerator: unmatched data error (high value 0.93540 at 2025.09.29 16:00 is not reached from the least timeframe, high price 0.93510 mismatches)
+1	00:17:47.334	TestGenerator: unmatched data error (high value 0.93560 at 2025.09.29 20:00 is not reached from the least timeframe, high price 0.93550 mismatches)
+1	00:17:47.334	TestGenerator: unmatched data error (low value 0.93380 at 2025.09.30 04:00 is not reached from the least timeframe, low price 0.93420 mismatches)
+1	00:17:47.334	TestGenerator: unmatched data error (high value 0.93710 at 2025.09.30 08:00 is not reached from the least timeframe, high price 0.93670 mismatches)
+1	00:17:47.334	TestGenerator: unmatched data error (low value 0.93370 at 2025.09.30 12:00 is not reached from the least timeframe, low price 0.93460 mismatches)
+1	00:17:47.334	TestGenerator: unmatched data error (high value 0.93480 at 2025.09.30 20:00 is not reached from the least timeframe, high price 0.93470 mismatches)
+1	00:17:47.334	TestGenerator: unmatched data error (low value 0.93390 at 2025.10.01 00:00 is not reached from the least timeframe, low price 0.93400 mismatches)
+1	00:17:47.334	TestGenerator: unmatched data error (low value 0.93300 at 2025.10.01 04:00 is not reached from the least timeframe, low price 0.93340 mismatches)
+1	00:17:47.334	TestGenerator: unmatched data error (high value 0.93690 at 2025.10.01 08:00 is not reached from the least timeframe, high price 0.93510 mismatches)
+1	00:17:47.334	TestGenerator: unmatched data error (low value 0.93540 at 2025.10.01 12:00 is not reached from the least timeframe, low price 0.93560 mismatches)
+1	00:17:47.334	TestGenerator: unmatched data error (low value 0.93440 at 2025.10.01 16:00 is not reached from the least timeframe, low price 0.93470 mismatches)
+1	00:17:47.334	TestGenerator: unmatched data error (high value 0.93530 at 2025.10.01 20:00 is not reached from the least timeframe, high price 0.93520 mismatches)
+1	00:17:47.334	TestGenerator: unmatched data error (high value 0.93630 at 2025.10.02 04:00 is not reached from the least timeframe, high price 0.93510 mismatches)
+1	00:17:47.334	TestGenerator: unmatched data error (low value 0.93420 at 2025.10.02 08:00 is not reached from the least timeframe, low price 0.93460 mismatches)
+1	00:17:47.334	TestGenerator: unmatched data error (low value 0.93410 at 2025.10.02 12:00 is not reached from the least timeframe, low price 0.93440 mismatches)
+1	00:17:47.334	TestGenerator: unmatched data error (high value 0.93550 at 2025.10.02 16:00 is not reached from the least timeframe, high price 0.93530 mismatches)
+1	00:17:47.334	TestGenerator: unmatched data error (low value 0.93400 at 2025.10.02 16:00 is not reached from the least timeframe, low price 0.93430 mismatches)
+1	00:17:47.334	TestGenerator: unmatched data error (high value 0.93540 at 2025.10.03 00:00 is not reached from the least timeframe, high price 0.93510 mismatches)
+1	00:17:47.335	TestGenerator: unmatched data error (high value 0.93540 at 2025.10.03 04:00 is not reached from the least timeframe, high price 0.93510 mismatches)
+1	00:17:47.335	TestGenerator: unmatched data error (low value 0.93420 at 2025.10.03 04:00 is not reached from the least timeframe, low price 0.93430 mismatches)
+1	00:17:47.335	TestGenerator: unmatched data error (low value 0.93380 at 2025.10.03 08:00 is not reached from the least timeframe, low price 0.93410 mismatches)
+1	00:17:47.335	TestGenerator: unmatched data error (high value 0.93520 at 2025.10.03 12:00 is not reached from the least timeframe, high price 0.93510 mismatches)
+1	00:17:47.335	TestGenerator: unmatched data error (low value 0.93310 at 2025.10.03 12:00 is not reached from the least timeframe, low price 0.93360 mismatches)
+1	00:17:47.335	TestGenerator: unmatched data error (high value 0.93440 at 2025.10.05 20:00 is not reached from the least timeframe, high price 0.93430 mismatches)
+1	00:17:47.335	TestGenerator: unmatched data error (low value 0.93240 at 2025.10.06 00:00 is not reached from the least timeframe, low price 0.93270 mismatches)
+1	00:17:47.335	TestGenerator: unmatched data error (high value 0.93390 at 2025.10.06 04:00 is not reached from the least timeframe, high price 0.93320 mismatches)
+1	00:17:47.335	TestGenerator: unmatched data error (low value 0.93130 at 2025.10.06 04:00 is not reached from the least timeframe, low price 0.93220 mismatches)
+1	00:17:47.335	TestGenerator: unmatched data error (low value 0.93070 at 2025.10.06 08:00 is not reached from the least timeframe, low price 0.93080 mismatches)
+1	00:17:47.335	TestGenerator: unmatched data error (high value 0.93250 at 2025.10.06 12:00 is not reached from the least timeframe, high price 0.93240 mismatches)
+1	00:17:47.335	TestGenerator: unmatched data error (low value 0.93070 at 2025.10.06 12:00 is not reached from the least timeframe, low price 0.93080 mismatches)
+1	00:17:47.335	TestGenerator: unmatched data error (high value 0.93170 at 2025.10.06 16:00 is not reached from the least timeframe, high price 0.93160 mismatches)
+1	00:17:47.335	TestGenerator: unmatched data error (low value 0.93050 at 2025.10.06 16:00 is not reached from the least timeframe, low price 0.93070 mismatches)
+1	00:17:47.335	TestGenerator: unmatched data error (high value 0.93120 at 2025.10.07 00:00 is not reached from the least timeframe, high price 0.93100 mismatches)
+1	00:17:47.335	TestGenerator: unmatched data error (high value 0.93130 at 2025.10.07 04:00 is not reached from the least timeframe, high price 0.93110 mismatches)
+1	00:17:47.335	TestGenerator: unmatched data error (high value 0.93140 at 2025.10.07 08:00 is not reached from the least timeframe, high price 0.93130 mismatches)
+1	00:17:47.335	TestGenerator: unmatched data error (low value 0.92950 at 2025.10.07 12:00 is not reached from the least timeframe, low price 0.92980 mismatches)
+1	00:17:47.335	TestGenerator: unmatched data error (low value 0.92970 at 2025.10.07 16:00 is not reached from the least timeframe, low price 0.92990 mismatches)
+1	00:17:47.335	TestGenerator: unmatched data error (high value 0.93080 at 2025.10.07 20:00 is not reached from the least timeframe, high price 0.93070 mismatches)
+1	00:17:47.335	TestGenerator: unmatched data error (high value 0.93180 at 2025.10.08 04:00 is not reached from the least timeframe, high price 0.93070 mismatches)
+1	00:17:47.335	TestGenerator: unmatched data error (low value 0.92970 at 2025.10.08 12:00 is not reached from the least timeframe, low price 0.92980 mismatches)
+1	00:17:47.335	TestGenerator: unmatched data error (high value 0.93230 at 2025.10.08 16:00 is not reached from the least timeframe, high price 0.93160 mismatches)
+1	00:17:47.335	TestGenerator: unmatched data error (high value 0.93290 at 2025.10.09 04:00 is not reached from the least timeframe, high price 0.93250 mismatches)
+1	00:17:47.335	TestGenerator: unmatched data error (low value 0.93140 at 2025.10.09 04:00 is not reached from the least timeframe, low price 0.93170 mismatches)
+1	00:17:47.335	TestGenerator: unmatched data error (low value 0.92960 at 2025.10.09 08:00 is not reached from the least timeframe, low price 0.93050 mismatches)
+1	00:17:47.335	TestGenerator: unmatched data error (high value 0.93300 at 2025.10.10 04:00 is not reached from the least timeframe, high price 0.93290 mismatches)
+1	00:17:47.335	TestGenerator: unmatched data error (low value 0.93140 at 2025.10.10 04:00 is not reached from the least timeframe, low price 0.93190 mismatches)
+1	00:17:47.335	TestGenerator: unmatched data error (low value 0.92970 at 2025.10.10 12:00 is not reached from the least timeframe, low price 0.93100 mismatches)
+1	00:17:47.335	TestGenerator: unmatched data error (high value 0.93100 at 2025.10.12 20:00 is not reached from the least timeframe, high price 0.93080 mismatches)
+1	00:17:47.335	TestGenerator: unmatched data error (high value 0.93140 at 2025.10.13 00:00 is not reached from the least timeframe, high price 0.93130 mismatches)
+1	00:17:47.335	TestGenerator: unmatched data error (high value 0.93130 at 2025.10.13 04:00 is not reached from the least timeframe, high price 0.93120 mismatches)
+1	00:17:47.335	TestGenerator: unmatched data error (low value 0.92970 at 2025.10.13 04:00 is not reached from the least timeframe, low price 0.93020 mismatches)
+1	00:17:47.336	TestGenerator: unmatched data error (low value 0.92980 at 2025.10.13 08:00 is not reached from the least timeframe, low price 0.93020 mismatches)
+1	00:17:47.336	TestGenerator: unmatched data error (high value 0.93160 at 2025.10.13 12:00 is not reached from the least timeframe, high price 0.93130 mismatches)
+1	00:17:47.336	TestGenerator: unmatched data error (low value 0.92970 at 2025.10.13 16:00 is not reached from the least timeframe, low price 0.92990 mismatches)
+1	00:17:47.336	TestGenerator: unmatched data error (high value 0.93050 at 2025.10.13 20:00 is not reached from the least timeframe, high price 0.93040 mismatches)
+1	00:17:47.336	TestGenerator: unmatched data error (high value 0.93090 at 2025.10.14 00:00 is not reached from the least timeframe, high price 0.93060 mismatches)
+1	00:17:47.336	TestGenerator: unmatched data error (low value 0.92820 at 2025.10.14 04:00 is not reached from the least timeframe, low price 0.92950 mismatches)
+1	00:17:47.336	TestGenerator: unmatched data error (high value 0.92950 at 2025.10.14 08:00 is not reached from the least timeframe, high price 0.92930 mismatches)
+1	00:17:47.336	TestGenerator: unmatched data error (high value 0.93050 at 2025.10.14 12:00 is not reached from the least timeframe, high price 0.93000 mismatches)
+1	00:17:47.336	TestGenerator: unmatched data error (high value 0.93000 at 2025.10.14 20:00 is not reached from the least timeframe, high price 0.92990 mismatches)
+1	00:17:47.336	TestGenerator: unmatched data error (low value 0.92930 at 2025.10.15 00:00 is not reached from the least timeframe, low price 0.92940 mismatches)
+1	00:17:47.336	TestGenerator: unmatched data error (high value 0.93050 at 2025.10.15 04:00 is not reached from the least timeframe, high price 0.92990 mismatches)
+1	00:17:47.336	TestGenerator: unmatched data error (low value 0.92900 at 2025.10.15 04:00 is not reached from the least timeframe, low price 0.92910 mismatches)
+1	00:17:47.336	TestGenerator: unmatched data error (low value 0.92960 at 2025.10.15 08:00 is not reached from the least timeframe, low price 0.92980 mismatches)
+1	00:17:47.336	TestGenerator: unmatched data error (low value 0.92650 at 2025.10.15 12:00 is not reached from the least timeframe, low price 0.92900 mismatches)
+1	00:17:47.336	TestGenerator: unmatched data error (low value 0.92570 at 2025.10.16 00:00 is not reached from the least timeframe, low price 0.92600 mismatches)
+1	00:17:47.336	TestGenerator: unmatched data error (high value 0.92870 at 2025.10.16 04:00 is not reached from the least timeframe, high price 0.92830 mismatches)
+1	00:17:47.336	TestGenerator: unmatched data error (high value 0.93050 at 2025.10.16 08:00 is not reached from the least timeframe, high price 0.92890 mismatches)
+1	00:17:47.336	TestGenerator: unmatched data error (low value 0.92760 at 2025.10.16 12:00 is not reached from the least timeframe, low price 0.92840 mismatches)
+1	00:17:47.336	TestGenerator: unmatched data error (low value 0.92610 at 2025.10.16 16:00 is not reached from the least timeframe, low price 0.92680 mismatches)
+1	00:17:47.336	TestGenerator: unmatched data error (low value 0.92580 at 2025.10.16 20:00 is not reached from the least timeframe, low price 0.92600 mismatches)
+1	00:17:47.336	TestGenerator: unmatched data error (low value 0.92480 at 2025.10.17 00:00 is not reached from the least timeframe, low price 0.92550 mismatches)
+1	00:17:47.336	TestGenerator: unmatched data error (low value 0.92170 at 2025.10.17 04:00 is not reached from the least timeframe, low price 0.92480 mismatches)
+1	00:17:47.336	TestGenerator: unmatched data error (high value 0.92550 at 2025.10.17 08:00 is not reached from the least timeframe, high price 0.92470 mismatches)
+1	00:17:47.336	TestGenerator: unmatched data error (high value 0.92550 at 2025.10.17 16:00 is not reached from the least timeframe, high price 0.92470 mismatches)
+1	00:17:47.336	TestGenerator: unmatched data error (high value 0.92550 at 2025.10.19 20:00 is not reached from the least timeframe, high price 0.92530 mismatches)
+1	00:17:47.336	TestGenerator: unmatched data error (high value 0.92590 at 2025.10.20 04:00 is not reached from the least timeframe, high price 0.92570 mismatches)
+1	00:17:47.336	TestGenerator: unmatched data error (low value 0.92450 at 2025.10.20 04:00 is not reached from the least timeframe, low price 0.92460 mismatches)
+1	00:17:47.336	TestGenerator: unmatched data error (low value 0.92320 at 2025.10.20 08:00 is not reached from the least timeframe, low price 0.92370 mismatches)
+1	00:17:47.336	TestGenerator: unmatched data error (low value 0.92110 at 2025.10.20 12:00 is not reached from the least timeframe, low price 0.92240 mismatches)
+1	00:17:47.336	TestGenerator: unmatched data error (low value 0.92170 at 2025.10.20 16:00 is not reached from the least timeframe, low price 0.92200 mismatches)
+1	00:17:47.336	TestGenerator: unmatched data error (low value 0.92060 at 2025.10.21 04:00 is not reached from the least timeframe, low price 0.92180 mismatches)
+1	00:17:47.336	TestGenerator: unmatched data error (high value 0.92350 at 2025.10.21 08:00 is not reached from the least timeframe, high price 0.92330 mismatches)
+1	00:17:47.336	TestGenerator: unmatched data error (low value 0.92180 at 2025.10.21 12:00 is not reached from the least timeframe, low price 0.92200 mismatches)
+1	00:17:47.336	TestGenerator: unmatched data error (high value 0.92430 at 2025.10.21 20:00 is not reached from the least timeframe, high price 0.92380 mismatches)
+1	00:17:47.337	TestGenerator: unmatched data error (low value 0.92280 at 2025.10.22 04:00 is not reached from the least timeframe, low price 0.92320 mismatches)
+1	00:17:47.337	TestGenerator: unmatched data error (low value 0.92170 at 2025.10.22 08:00 is not reached from the least timeframe, low price 0.92260 mismatches)
+1	00:17:47.337	TestGenerator: unmatched data error (high value 0.92430 at 2025.10.22 12:00 is not reached from the least timeframe, high price 0.92420 mismatches)
+1	00:17:47.337	TestGenerator: unmatched data error (high value 0.92470 at 2025.10.23 00:00 is not reached from the least timeframe, high price 0.92460 mismatches)
+1	00:17:47.337	TestGenerator: unmatched data error (high value 0.92530 at 2025.10.23 04:00 is not reached from the least timeframe, high price 0.92480 mismatches)
+1	00:17:47.337	TestGenerator: unmatched data error (low value 0.92390 at 2025.10.23 04:00 is not reached from the least timeframe, low price 0.92400 mismatches)
+1	00:17:47.337	TestGenerator: unmatched data error (high value 0.92540 at 2025.10.23 08:00 is not reached from the least timeframe, high price 0.92530 mismatches)
+1	00:17:47.337	TestGenerator: unmatched data error (low value 0.92310 at 2025.10.23 12:00 is not reached from the least timeframe, low price 0.92390 mismatches)
+1	00:17:47.337	TestGenerator: unmatched data error (high value 0.92400 at 2025.10.23 16:00 is not reached from the least timeframe, high price 0.92390 mismatches)
+1	00:17:47.373	TestGenerator: 1506 generating errors, logged 100 first error records
+2	00:17:47.374	1970.01.01 00:00:00  PtrStrategy_EA inputs: InpEntryMode=2; InpBandConfirmMode=0; InpYellowCrossMode=0; InpMegaTrigger=0; InpConfirmLookbackBars=8; InpConfirmTimeoutBars=5; InpMegaFastPeriod=48; InpMegaSlowPeriod=78; InpYellowHalfLength=21; InpYellowDev=1.8; InpGreenHalfLength=40; InpGreenDev=1.8; InpWhiteHalfLength=32; InpWhitePeriod=100; InpWhiteMultiplier=2.8; InpExitMode=0; InpLots=0.1; InpTakeProfitPips=50; InpStopLossPips=50; InpTrailingStopPips=0; InpMaxSpreadPoints=30; InpSlippage=10; InpMagicNumber=20260908; InpUseRealStochFilter=0; InpStochKPeriod=32; InpStochDPeriod=5; InpStochSlowing=10; InpStochZoneUpper=90; InpStochZoneLower=10; InpStochZoneLookback=10; InpUseHmaStochFilter=0; InpHmaStochPeriod=14; InpHmaStochLowerLevel=10; InpHmaStochUpperLevel=90; InpUseDivergenceFilter=0; InpDivergenceSwingBars=3; InpDivergenceLookback=40; InpShowOnChartDashboard=1; 
+0	00:17:47.413	2025.09.28 23:00:00  PtrStrategy_EA EURCHF,H4: [Init] PtrStrategy_EA v2.00 loaded | Symbol: EURCHF | Period: 240 | EntryMode: ENTRY_MEGA_ONLY | BandConfirm: BAND_CONFIRM_OUTER_BANDS | ExitMode: EXIT_FIXED_PIPS
+0	00:17:47.873	2025.09.30 16:00:00  PtrStrategy_EA EURCHF,H4: [Signal] ENTRY_MEGA_ONLY triggered: BUY
+2	00:17:47.873	2025.09.30 16:00:00  PtrStrategy_EA EURCHF,H4: open #1 buy 0.10 EURCHF at 0.9362 sl: 0.9312 tp: 0.9412 ok
+0	00:17:47.873	2025.09.30 16:00:00  PtrStrategy_EA EURCHF,H4: [Trade] Executed BUY #1 at 0.93620 | SL: 0.93120 | TP: 0.94120 | Lots: 0.10
+0	00:17:47.959	2025.10.06 00:00:00  PtrStrategy_EA EURCHF,H4: [Signal] ENTRY_MEGA_ONLY triggered: SELL
+0	00:17:47.959	2025.10.06 00:00:00  PtrStrategy_EA EURCHF,H4: [Trade] Position already open in opposite direction (ticket #1). New entry skipped.
+0	00:17:47.973	2025.10.06 13:40:00  Tester: stop loss #1 at 0.9312 (0.9311 / 0.9326)
+0	00:17:48.100	2025.10.10 12:00:00  PtrStrategy_EA EURCHF,H4: [Signal] ENTRY_MEGA_ONLY triggered: BUY
+2	00:17:48.100	2025.10.10 12:00:00  PtrStrategy_EA EURCHF,H4: open #2 buy 0.10 EURCHF at 0.9337 sl: 0.9287 tp: 0.9387 ok
+0	00:17:48.100	2025.10.10 12:00:00  PtrStrategy_EA EURCHF,H4: [Trade] Executed BUY #2 at 0.93370 | SL: 0.92870 | TP: 0.93870 | Lots: 0.10
+0	00:17:48.119	2025.10.10 20:50:00  Tester: stop loss #2 at 0.9287 (0.9285 / 0.9300)
+0	00:17:48.194	2025.10.15 16:00:00  PtrStrategy_EA EURCHF,H4: [Signal] ENTRY_MEGA_ONLY triggered: SELL
+2	00:17:48.194	2025.10.15 16:00:00  PtrStrategy_EA EURCHF,H4: open #3 sell 0.10 EURCHF at 0.9276 sl: 0.9326 tp: 0.9226 ok
+0	00:17:48.194	2025.10.15 16:00:00  PtrStrategy_EA EURCHF,H4: [Trade] Executed SELL #3 at 0.92760 | SL: 0.93260 | TP: 0.92260 | Lots: 0.10
+2	00:17:48.297	2025.10.20 21:01:59  Tester: take profit #3 at 0.9226 (0.9211 / 0.9226)
+0	00:17:48.366	2025.10.23 08:00:00  PtrStrategy_EA EURCHF,H4: [Signal] ENTRY_MEGA_ONLY triggered: BUY
+2	00:17:48.366	2025.10.23 08:00:00  PtrStrategy_EA EURCHF,H4: open #4 buy 0.10 EURCHF at 0.9262 sl: 0.9212 tp: 0.9312 ok
+0	00:17:48.366	2025.10.23 08:00:00  PtrStrategy_EA EURCHF,H4: [Trade] Executed BUY #4 at 0.92620 | SL: 0.92120 | TP: 0.93120 | Lots: 0.10
+2	00:17:48.585	2025.11.04 00:47:59  Tester: take profit #4 at 0.9312 (0.9312 / 0.9327)
+0	00:17:48.671	2025.11.07 08:00:00  PtrStrategy_EA EURCHF,H4: [Signal] ENTRY_MEGA_ONLY triggered: SELL
+2	00:17:48.671	2025.11.07 08:00:00  PtrStrategy_EA EURCHF,H4: open #5 sell 0.10 EURCHF at 0.9312 sl: 0.9362 tp: 0.9262 ok
+0	00:17:48.671	2025.11.07 08:00:00  PtrStrategy_EA EURCHF,H4: [Trade] Executed SELL #5 at 0.93120 | SL: 0.93620 | TP: 0.92620 | Lots: 0.10
+2	00:17:48.746	2025.11.12 13:10:59  Tester: take profit #5 at 0.9262 (0.9247 / 0.9262)
+0	00:17:48.887	2025.11.19 00:00:00  PtrStrategy_EA EURCHF,H4: [Signal] ENTRY_MEGA_ONLY triggered: BUY
+2	00:17:48.887	2025.11.19 00:00:00  PtrStrategy_EA EURCHF,H4: open #6 buy 0.10 EURCHF at 0.9281 sl: 0.9231 tp: 0.9331 ok
+0	00:17:48.887	2025.11.19 00:00:00  PtrStrategy_EA EURCHF,H4: [Trade] Executed BUY #6 at 0.92810 | SL: 0.92310 | TP: 0.93310 | Lots: 0.10
+2	00:17:49.009	2025.11.25 09:20:59  Tester: take profit #6 at 0.9331 (0.9331 / 0.9346)
+0	00:17:49.064	2025.11.27 12:00:00  PtrStrategy_EA EURCHF,H4: [Signal] ENTRY_MEGA_ONLY triggered: SELL
+2	00:17:49.064	2025.11.27 12:00:00  PtrStrategy_EA EURCHF,H4: open #7 sell 0.10 EURCHF at 0.9337 sl: 0.9387 tp: 0.9287 ok
+0	00:17:49.064	2025.11.27 12:00:00  PtrStrategy_EA EURCHF,H4: [Trade] Executed SELL #7 at 0.93370 | SL: 0.93870 | TP: 0.92870 | Lots: 0.10
+0	00:17:49.249	2025.12.05 08:00:00  PtrStrategy_EA EURCHF,H4: [Signal] ENTRY_MEGA_ONLY triggered: BUY
+0	00:17:49.249	2025.12.05 08:00:00  PtrStrategy_EA EURCHF,H4: [Trade] Position already open in opposite direction (ticket #7). New entry skipped.
+0	00:17:49.315	2025.12.08 09:03:59  Tester: stop loss #7 at 0.9387 (0.9372 / 0.9387)
+0	00:17:49.452	2025.12.11 08:00:00  PtrStrategy_EA EURCHF,H4: [Signal] ENTRY_MEGA_ONLY triggered: SELL
+2	00:17:49.452	2025.12.11 08:00:00  PtrStrategy_EA EURCHF,H4: open #8 sell 0.10 EURCHF at 0.9352 sl: 0.9402 tp: 0.9302 ok
+0	00:17:49.452	2025.12.11 08:00:00  PtrStrategy_EA EURCHF,H4: [Trade] Executed SELL #8 at 0.93520 | SL: 0.94020 | TP: 0.93020 | Lots: 0.10
+0	00:17:49.580	2025.12.17 16:00:00  PtrStrategy_EA EURCHF,H4: [Signal] ENTRY_MEGA_ONLY triggered: BUY
+0	00:17:49.580	2025.12.17 16:00:00  PtrStrategy_EA EURCHF,H4: [Trade] Position already open in opposite direction (ticket #8). New entry skipped.
+0	00:17:49.624	2025.12.19 04:00:00  PtrStrategy_EA EURCHF,H4: [Signal] ENTRY_MEGA_ONLY triggered: SELL
+2	00:17:49.704	2025.12.23 12:31:59  Tester: take profit #8 at 0.9302 (0.9287 / 0.9302)
+0	00:17:49.787	2025.12.29 00:00:00  PtrStrategy_EA EURCHF,H4: [Signal] ENTRY_MEGA_ONLY triggered: BUY
+2	00:17:49.787	2025.12.29 00:00:00  PtrStrategy_EA EURCHF,H4: open #9 buy 0.10 EURCHF at 0.9306 sl: 0.9256 tp: 0.9356 ok
+0	00:17:49.787	2025.12.29 00:00:00  PtrStrategy_EA EURCHF,H4: [Trade] Executed BUY #9 at 0.93060 | SL: 0.92560 | TP: 0.93560 | Lots: 0.10
+0	00:17:49.955	2026.01.05 20:00:00  PtrStrategy_EA EURCHF,H4: [Signal] ENTRY_MEGA_ONLY triggered: SELL
+0	00:17:49.955	2026.01.05 20:00:00  PtrStrategy_EA EURCHF,H4: [Trade] Position already open in opposite direction (ticket #9). New entry skipped.
+0	00:17:50.026	2026.01.08 08:00:00  PtrStrategy_EA EURCHF,H4: [Signal] ENTRY_MEGA_ONLY triggered: BUY
+0	00:17:50.171	2026.01.14 16:00:00  PtrStrategy_EA EURCHF,H4: [Signal] ENTRY_MEGA_ONLY triggered: SELL
+0	00:17:50.171	2026.01.14 16:00:00  PtrStrategy_EA EURCHF,H4: [Trade] Position already open in opposite direction (ticket #9). New entry skipped.
+0	00:17:50.376	2026.01.23 17:40:00  Tester: stop loss #9 at 0.9256 (0.9243 / 0.9258)
+0	00:17:50.377	2026.01.23 20:00:00  PtrStrategy_EA EURCHF,H4: [Signal] ENTRY_MEGA_ONLY triggered: BUY
+2	00:17:50.377	2026.01.23 20:00:00  PtrStrategy_EA EURCHF,H4: open #10 buy 0.10 EURCHF at 0.9258 sl: 0.9208 tp: 0.9308 ok
+0	00:17:50.377	2026.01.23 20:00:00  PtrStrategy_EA EURCHF,H4: [Trade] Executed BUY #10 at 0.92580 | SL: 0.92080 | TP: 0.93080 | Lots: 0.10
+0	00:17:50.389	2026.01.26 04:00:00  PtrStrategy_EA EURCHF,H4: [Signal] ENTRY_MEGA_ONLY triggered: SELL
+0	00:17:50.389	2026.01.26 04:00:00  PtrStrategy_EA EURCHF,H4: [Trade] Position already open in opposite direction (ticket #10). New entry skipped.
+0	00:17:50.399	2026.01.26 09:28:59  Tester: stop loss #10 at 0.9208 (0.9208 / 0.9223)
+0	00:17:50.561	2026.02.02 16:00:00  PtrStrategy_EA EURCHF,H4: [Signal] ENTRY_MEGA_ONLY triggered: BUY
+2	00:17:50.561	2026.02.02 16:00:00  PtrStrategy_EA EURCHF,H4: open #11 buy 0.10 EURCHF at 0.9231 sl: 0.9181 tp: 0.9281 ok
+0	00:17:50.561	2026.02.02 16:00:00  PtrStrategy_EA EURCHF,H4: [Trade] Executed BUY #11 at 0.92310 | SL: 0.91810 | TP: 0.92810 | Lots: 0.10
+0	00:17:50.581	2026.02.03 09:40:00  Tester: stop loss #11 at 0.9181 (0.9175 / 0.9190)
+0	00:17:50.697	2026.02.10 00:00:00  PtrStrategy_EA EURCHF,H4: [Signal] ENTRY_MEGA_ONLY triggered: SELL
+2	00:17:50.697	2026.02.10 00:00:00  PtrStrategy_EA EURCHF,H4: open #12 sell 0.10 EURCHF at 0.9130 sl: 0.9180 tp: 0.9080 ok
+0	00:17:50.697	2026.02.10 00:00:00  PtrStrategy_EA EURCHF,H4: [Trade] Executed SELL #12 at 0.91300 | SL: 0.91800 | TP: 0.90800 | Lots: 0.10
+0	00:17:50.825	2026.02.13 20:00:00  PtrStrategy_EA EURCHF,H4: [Signal] ENTRY_MEGA_ONLY triggered: BUY
+0	00:17:50.825	2026.02.13 20:00:00  PtrStrategy_EA EURCHF,H4: [Trade] Position already open in opposite direction (ticket #12). New entry skipped.
+0	00:17:51.047	2026.02.26 12:00:00  PtrStrategy_EA EURCHF,H4: [Signal] ENTRY_MEGA_ONLY triggered: SELL
+2	00:17:51.100	2026.03.02 00:00:00  Tester: take profit #12 at 0.9080 (0.9049 / 0.9064)
+0	00:17:51.352	2026.03.11 12:00:00  PtrStrategy_EA EURCHF,H4: [Signal] ENTRY_MEGA_ONLY triggered: BUY
+2	00:17:51.352	2026.03.11 12:00:00  PtrStrategy_EA EURCHF,H4: open #13 buy 0.10 EURCHF at 0.9046 sl: 0.8996 tp: 0.9096 ok
+0	00:17:51.352	2026.03.11 12:00:00  PtrStrategy_EA EURCHF,H4: [Trade] Executed BUY #13 at 0.90460 | SL: 0.89960 | TP: 0.90960 | Lots: 0.10
+2	00:17:51.553	2026.03.19 09:34:59  Tester: take profit #13 at 0.9096 (0.9096 / 0.9111)
+0	00:17:51.727	2026.03.26 12:00:00  PtrStrategy_EA EURCHF,H4: [Signal] ENTRY_MEGA_ONLY triggered: SELL
+2	00:17:51.727	2026.03.26 12:00:00  PtrStrategy_EA EURCHF,H4: open #14 sell 0.10 EURCHF at 0.9145 sl: 0.9195 tp: 0.9095 ok
+0	00:17:51.727	2026.03.26 12:00:00  PtrStrategy_EA EURCHF,H4: [Trade] Executed SELL #14 at 0.91450 | SL: 0.91950 | TP: 0.90950 | Lots: 0.10
+0	00:17:51.752	2026.03.27 05:31:59  Tester: stop loss #14 at 0.9195 (0.9180 / 0.9195)
+0	00:17:51.779	2026.03.30 04:00:00  PtrStrategy_EA EURCHF,H4: [Signal] ENTRY_MEGA_ONLY triggered: BUY
+2	00:17:51.779	2026.03.30 04:00:00  PtrStrategy_EA EURCHF,H4: open #15 buy 0.10 EURCHF at 0.9212 sl: 0.9162 tp: 0.9262 ok
+0	00:17:51.779	2026.03.30 04:00:00  PtrStrategy_EA EURCHF,H4: [Trade] Executed BUY #15 at 0.92120 | SL: 0.91620 | TP: 0.92620 | Lots: 0.10
+0	00:17:51.800	2026.03.30 16:00:00  PtrStrategy_EA EURCHF,H4: [Signal] ENTRY_MEGA_ONLY triggered: SELL
+0	00:17:51.800	2026.03.30 16:00:00  PtrStrategy_EA EURCHF,H4: [Trade] Position already open in opposite direction (ticket #15). New entry skipped.
+0	00:17:51.809	2026.03.30 20:31:59  Tester: stop loss #15 at 0.9162 (0.9162 / 0.9177)
+0	00:17:51.878	2026.04.01 08:00:00  PtrStrategy_EA EURCHF,H4: [Signal] ENTRY_MEGA_ONLY triggered: BUY
+2	00:17:51.878	2026.04.01 08:00:00  PtrStrategy_EA EURCHF,H4: open #16 buy 0.10 EURCHF at 0.9216 sl: 0.9166 tp: 0.9266 ok
+0	00:17:51.878	2026.04.01 08:00:00  PtrStrategy_EA EURCHF,H4: [Trade] Executed BUY #16 at 0.92160 | SL: 0.91660 | TP: 0.92660 | Lots: 0.10
+0	00:17:51.903	2026.04.01 20:00:00  PtrStrategy_EA EURCHF,H4: [Signal] ENTRY_MEGA_ONLY triggered: SELL
+0	00:17:51.903	2026.04.01 20:00:00  PtrStrategy_EA EURCHF,H4: [Trade] Position already open in opposite direction (ticket #16). New entry skipped.
+0	00:17:52.147	2026.04.12 23:00:00  PtrStrategy_EA EURCHF,H4: [Signal] ENTRY_MEGA_ONLY triggered: BUY
+0	00:17:52.168	2026.04.13 16:00:00  PtrStrategy_EA EURCHF,H4: [Signal] ENTRY_MEGA_ONLY triggered: SELL
+0	00:17:52.168	2026.04.13 16:00:00  PtrStrategy_EA EURCHF,H4: [Trade] Position already open in opposite direction (ticket #16). New entry skipped.
+0	00:17:52.363	2026.04.21 21:40:00  Tester: stop loss #16 at 0.9166 (0.9166 / 0.9181)
+0	00:17:52.438	2026.04.24 08:00:00  PtrStrategy_EA EURCHF,H4: [Signal] ENTRY_MEGA_ONLY triggered: BUY
+2	00:17:52.438	2026.04.24 08:00:00  PtrStrategy_EA EURCHF,H4: open #17 buy 0.10 EURCHF at 0.9210 sl: 0.9160 tp: 0.9260 ok
+0	00:17:52.438	2026.04.24 08:00:00  PtrStrategy_EA EURCHF,H4: [Trade] Executed BUY #17 at 0.92100 | SL: 0.91600 | TP: 0.92600 | Lots: 0.10
+0	00:17:52.614	2026.05.01 08:00:00  PtrStrategy_EA EURCHF,H4: [Signal] ENTRY_MEGA_ONLY triggered: SELL
+0	00:17:52.614	2026.05.01 08:00:00  PtrStrategy_EA EURCHF,H4: [Trade] Position already open in opposite direction (ticket #17). New entry skipped.
+0	00:17:52.626	2026.05.01 20:31:59  Tester: stop loss #17 at 0.9160 (0.9160 / 0.9175)
+0	00:17:52.751	2026.05.08 08:00:00  PtrStrategy_EA EURCHF,H4: [Signal] ENTRY_MEGA_ONLY triggered: BUY
+2	00:17:52.751	2026.05.08 08:00:00  PtrStrategy_EA EURCHF,H4: open #18 buy 0.10 EURCHF at 0.9165 sl: 0.9115 tp: 0.9215 ok
+0	00:17:52.751	2026.05.08 08:00:00  PtrStrategy_EA EURCHF,H4: [Trade] Executed BUY #18 at 0.91650 | SL: 0.91150 | TP: 0.92150 | Lots: 0.10
+0	00:17:52.871	2026.05.15 16:00:00  PtrStrategy_EA EURCHF,H4: [Signal] ENTRY_MEGA_ONLY triggered: SELL
+0	00:17:52.871	2026.05.15 16:00:00  PtrStrategy_EA EURCHF,H4: [Trade] Position already open in opposite direction (ticket #18). New entry skipped.
+0	00:17:52.935	2026.05.20 12:00:00  PtrStrategy_EA EURCHF,H4: [Signal] ENTRY_MEGA_ONLY triggered: BUY
+0	00:17:52.990	2026.05.22 16:10:59  Tester: stop loss #18 at 0.9115 (0.9115 / 0.9130)
+0	00:17:52.999	2026.05.22 20:00:00  PtrStrategy_EA EURCHF,H4: [Signal] ENTRY_MEGA_ONLY triggered: SELL
+2	00:17:52.999	2026.05.22 20:00:00  PtrStrategy_EA EURCHF,H4: open #19 sell 0.10 EURCHF at 0.9109 sl: 0.9159 tp: 0.9059 ok
+0	00:17:52.999	2026.05.22 20:00:00  PtrStrategy_EA EURCHF,H4: [Trade] Executed SELL #19 at 0.91090 | SL: 0.91590 | TP: 0.90590 | Lots: 0.10
+0	00:17:53.066	2026.05.27 05:40:00  Tester: stop loss #19 at 0.9159 (0.9145 / 0.9160)
+0	00:17:53.080	2026.05.27 16:00:00  PtrStrategy_EA EURCHF,H4: [Signal] ENTRY_MEGA_ONLY triggered: BUY
+2	00:17:53.080	2026.05.27 16:00:00  PtrStrategy_EA EURCHF,H4: open #20 buy 0.10 EURCHF at 0.9169 sl: 0.9119 tp: 0.9219 ok
+0	00:17:53.080	2026.05.27 16:00:00  PtrStrategy_EA EURCHF,H4: [Trade] Executed BUY #20 at 0.91690 | SL: 0.91190 | TP: 0.92190 | Lots: 0.10
+0	00:17:53.137	2026.05.29 09:40:00  Tester: stop loss #20 at 0.9119 (0.9109 / 0.9124)
+0	00:17:53.193	2026.06.02 12:00:00  PtrStrategy_EA EURCHF,H4: [Signal] ENTRY_MEGA_ONLY triggered: SELL
+2	00:17:53.193	2026.06.02 12:00:00  PtrStrategy_EA EURCHF,H4: open #21 sell 0.10 EURCHF at 0.9146 sl: 0.9196 tp: 0.9096 ok
+0	00:17:53.193	2026.06.02 12:00:00  PtrStrategy_EA EURCHF,H4: [Trade] Executed SELL #21 at 0.91460 | SL: 0.91960 | TP: 0.90960 | Lots: 0.10
+0	00:17:53.208	2026.06.03 00:00:00  PtrStrategy_EA EURCHF,H4: [Signal] ENTRY_MEGA_ONLY triggered: BUY
+0	00:17:53.208	2026.06.03 00:00:00  PtrStrategy_EA EURCHF,H4: [Trade] Position already open in opposite direction (ticket #21). New entry skipped.
+0	00:17:53.225	2026.06.03 16:29:59  Tester: stop loss #21 at 0.9196 (0.9181 / 0.9196)
+0	00:17:53.413	2026.06.12 16:00:00  PtrStrategy_EA EURCHF,H4: [Signal] ENTRY_MEGA_ONLY triggered: SELL
+2	00:17:53.413	2026.06.12 16:00:00  PtrStrategy_EA EURCHF,H4: open #22 sell 0.10 EURCHF at 0.9217 sl: 0.9267 tp: 0.9167 ok
+0	00:17:53.413	2026.06.12 16:00:00  PtrStrategy_EA EURCHF,H4: [Trade] Executed SELL #22 at 0.92170 | SL: 0.92670 | TP: 0.91670 | Lots: 0.10
+0	00:17:53.695	2026.06.19 12:19:11  Tester: stop loss #22 at 0.9267 (0.9261 / 0.9276)
+0	00:17:53.695	2026.06.19 16:00:00  PtrStrategy_EA EURCHF,H4: [Signal] ENTRY_MEGA_ONLY triggered: BUY
+2	00:17:53.695	2026.06.19 16:00:00  PtrStrategy_EA EURCHF,H4: open #23 buy 0.10 EURCHF at 0.9276 sl: 0.9226 tp: 0.9326 ok
+0	00:17:53.695	2026.06.19 16:00:00  PtrStrategy_EA EURCHF,H4: [Trade] Executed BUY #23 at 0.92760 | SL: 0.92260 | TP: 0.93260 | Lots: 0.10
+0	00:17:53.827	2026.06.23 08:19:11  Tester: stop loss #23 at 0.9226 (0.9224 / 0.9239)
+0	00:17:53.934	2026.06.24 16:00:00  PtrStrategy_EA EURCHF,H4: [Signal] ENTRY_MEGA_ONLY triggered: SELL
+2	00:17:53.934	2026.06.24 16:00:00  PtrStrategy_EA EURCHF,H4: open #24 sell 0.10 EURCHF at 0.9222 sl: 0.9272 tp: 0.9172 ok
+0	00:17:53.934	2026.06.24 16:00:00  PtrStrategy_EA EURCHF,H4: [Trade] Executed SELL #24 at 0.92220 | SL: 0.92720 | TP: 0.91720 | Lots: 0.10
+0	00:17:54.430	2026.06.30 16:00:00  PtrStrategy_EA EURCHF,H4: [Signal] ENTRY_MEGA_ONLY triggered: BUY
+0	00:17:54.430	2026.06.30 16:00:00  PtrStrategy_EA EURCHF,H4: [Trade] Position already open in opposite direction (ticket #24). New entry skipped.
+0	00:17:54.603	2026.07.03 00:00:00  PtrStrategy_EA EURCHF,H4: [Signal] ENTRY_MEGA_ONLY triggered: SELL
+0	00:17:54.825	2026.07.07 20:00:00  PtrStrategy_EA EURCHF,H4: [Signal] ENTRY_MEGA_ONLY triggered: BUY
+0	00:17:54.825	2026.07.07 20:00:00  PtrStrategy_EA EURCHF,H4: [Trade] Position already open in opposite direction (ticket #24). New entry skipped.
+0	00:17:55.136	2026.07.13 12:19:11  Tester: stop loss #24 at 0.9272 (0.9262 / 0.9277)
+0	00:17:55.326	2026.07.16 12:00:00  PtrStrategy_EA EURCHF,H4: [Signal] ENTRY_MEGA_ONLY triggered: SELL
+2	00:17:55.326	2026.07.16 12:00:00  PtrStrategy_EA EURCHF,H4: open #25 sell 0.10 EURCHF at 0.9250 sl: 0.9300 tp: 0.9200 ok
+0	00:17:55.326	2026.07.16 12:00:00  PtrStrategy_EA EURCHF,H4: [Trade] Executed SELL #25 at 0.92500 | SL: 0.93000 | TP: 0.92000 | Lots: 0.10
+0	00:17:55.615	2026.07.22 12:00:00  PtrStrategy_EA EURCHF,H4: [Signal] ENTRY_MEGA_ONLY triggered: BUY
+0	00:17:55.615	2026.07.22 12:00:00  PtrStrategy_EA EURCHF,H4: [Trade] Position already open in opposite direction (ticket #25). New entry skipped.
+0	00:17:55.631	2026.07.22 16:02:12  Tester: stop loss #25 at 0.9300 (0.9285 / 0.9300)
+0	00:17:55.948	2026.07.30 00:00:00  PtrStrategy_EA EURCHF,H4: [Signal] ENTRY_MEGA_ONLY triggered: SELL
+2	00:17:55.948	2026.07.30 00:00:00  PtrStrategy_EA EURCHF,H4: open #26 sell 0.10 EURCHF at 0.9327 sl: 0.9377 tp: 0.9277 ok
+0	00:17:55.948	2026.07.30 00:00:00  PtrStrategy_EA EURCHF,H4: [Trade] Executed SELL #26 at 0.93270 | SL: 0.93770 | TP: 0.92770 | Lots: 0.10
+0	00:17:56.323	2026.08.06 00:00:00  PtrStrategy_EA EURCHF,H4: [Signal] ENTRY_MEGA_ONLY triggered: BUY
+0	00:17:56.323	2026.08.06 00:00:00  PtrStrategy_EA EURCHF,H4: [Trade] Position already open in opposite direction (ticket #26). New entry skipped.
+0	00:17:56.372	2026.08.06 12:19:11  Tester: stop loss #26 at 0.9377 (0.9365 / 0.9380)
+0	00:17:57.005	2026.08.19 04:00:00  PtrStrategy_EA EURCHF,H4: [Signal] ENTRY_MEGA_ONLY triggered: SELL
+2	00:17:57.005	2026.08.19 04:00:00  PtrStrategy_EA EURCHF,H4: open #27 sell 0.10 EURCHF at 0.9399 sl: 0.9449 tp: 0.9349 ok
+0	00:17:57.005	2026.08.19 04:00:00  PtrStrategy_EA EURCHF,H4: [Trade] Executed SELL #27 at 0.93990 | SL: 0.94490 | TP: 0.93490 | Lots: 0.10
+2	00:17:57.038	2026.08.19 12:19:11  Tester: take profit #27 at 0.9349 (0.9329 / 0.9344)
+0	00:17:57.316	2026.08.25 20:00:00  PtrStrategy_EA EURCHF,H4: [Signal] ENTRY_MEGA_ONLY triggered: BUY
+2	00:17:57.316	2026.08.25 20:00:00  PtrStrategy_EA EURCHF,H4: open #28 buy 0.10 EURCHF at 0.9371 sl: 0.9321 tp: 0.9421 ok
+0	00:17:57.316	2026.08.25 20:00:00  PtrStrategy_EA EURCHF,H4: [Trade] Executed BUY #28 at 0.93710 | SL: 0.93210 | TP: 0.94210 | Lots: 0.10
+2	00:17:57.937	2026.09.02 04:03:49  Tester: take profit #28 at 0.9421 (0.9423 / 0.9438)
+0	00:17:58.226	2026.09.04 16:23:59  PtrStrategy_EA EURCHF,H4: [Signal] ENTRY_MEGA_ONLY triggered: SELL
+2	00:17:58.226	2026.09.04 16:23:59  PtrStrategy_EA EURCHF,H4: open #29 sell 0.10 EURCHF at 0.9405 sl: 0.9455 tp: 0.9355 ok
+0	00:17:58.226	2026.09.04 16:23:59  PtrStrategy_EA EURCHF,H4: [Trade] Executed SELL #29 at 0.94050 | SL: 0.94550 | TP: 0.93550 | Lots: 0.10
+2	00:17:58.237	2026.09.04 16:56:00  Tester: order #29 is closed
+0	00:17:58.244	EURCHF,H4: 23028 tick events (1492 bars, 23128 bar states) processed in 0:00:10.875 (total time 0:00:20.891)

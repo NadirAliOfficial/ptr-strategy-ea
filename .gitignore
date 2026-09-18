@@ -2,4 +2,5 @@
 !ea/*.ex4
 !original/*.ex4
 *.log
+!logs/*.log
 .DS_Store

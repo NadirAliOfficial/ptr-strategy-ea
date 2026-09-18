@@ -1,0 +1,155 @@
+0	22:01:22.219	Expert PtrStrategy_EA GBPCHF,H4: loaded successfully
+3	22:01:30.456	TestGenerator: no connect to trade server, default environment will be applied
+0	22:01:30.456	TestGenerator: spread set to 15
+1	22:01:32.498	TestGenerator: unmatched data error (low value 1.07370 at 2025.10.01 16:00 is not reached from the least timeframe, low price 1.07420 mismatches)
+1	22:01:32.498	TestGenerator: unmatched data error (low value 1.07270 at 2025.10.02 00:00 is not reached from the least timeframe, low price 1.07310 mismatches)
+1	22:01:32.498	TestGenerator: unmatched data error (high value 1.07560 at 2025.10.02 04:00 is not reached from the least timeframe, high price 1.07390 mismatches)
+1	22:01:32.498	TestGenerator: unmatched data error (low value 1.07160 at 2025.10.02 08:00 is not reached from the least timeframe, low price 1.07330 mismatches)
+1	22:01:32.498	TestGenerator: unmatched data error (low value 1.07050 at 2025.10.02 12:00 is not reached from the least timeframe, low price 1.07110 mismatches)
+1	22:01:32.498	TestGenerator: unmatched data error (high value 1.07320 at 2025.10.02 16:00 is not reached from the least timeframe, high price 1.07310 mismatches)
+1	22:01:32.498	TestGenerator: unmatched data error (low value 1.07160 at 2025.10.02 16:00 is not reached from the least timeframe, low price 1.07190 mismatches)
+1	22:01:32.498	TestGenerator: unmatched data error (high value 1.07310 at 2025.10.02 20:00 is not reached from the least timeframe, high price 1.07250 mismatches)
+1	22:01:32.498	TestGenerator: unmatched data error (high value 1.07280 at 2025.10.03 04:00 is not reached from the least timeframe, high price 1.07210 mismatches)
+1	22:01:32.498	TestGenerator: unmatched data error (low value 1.07100 at 2025.10.03 04:00 is not reached from the least timeframe, low price 1.07110 mismatches)
+1	22:01:32.498	TestGenerator: unmatched data error (low value 1.07010 at 2025.10.03 08:00 is not reached from the least timeframe, low price 1.07080 mismatches)
+1	22:01:32.498	TestGenerator: unmatched data error (high value 1.07250 at 2025.10.03 16:00 is not reached from the least timeframe, high price 1.07220 mismatches)
+1	22:01:32.498	TestGenerator: unmatched data error (high value 1.07150 at 2025.10.05 20:00 is not reached from the least timeframe, high price 1.07130 mismatches)
+1	22:01:32.498	TestGenerator: unmatched data error (high value 1.07420 at 2025.10.06 04:00 is not reached from the least timeframe, high price 1.07060 mismatches)
+1	22:01:32.498	TestGenerator: unmatched data error (low value 1.07060 at 2025.10.06 08:00 is not reached from the least timeframe, low price 1.07180 mismatches)
+1	22:01:32.498	TestGenerator: unmatched data error (high value 1.07340 at 2025.10.06 12:00 is not reached from the least timeframe, high price 1.07270 mismatches)
+1	22:01:32.498	TestGenerator: unmatched data error (low value 1.07060 at 2025.10.06 20:00 is not reached from the least timeframe, low price 1.07070 mismatches)
+1	22:01:32.498	TestGenerator: unmatched data error (high value 1.07230 at 2025.10.07 00:00 is not reached from the least timeframe, high price 1.07210 mismatches)
+1	22:01:32.498	TestGenerator: unmatched data error (low value 1.07030 at 2025.10.07 04:00 is not reached from the least timeframe, low price 1.07080 mismatches)
+1	22:01:32.498	TestGenerator: unmatched data error (high value 1.07300 at 2025.10.07 08:00 is not reached from the least timeframe, high price 1.07290 mismatches)
+1	22:01:32.498	TestGenerator: unmatched data error (low value 1.06950 at 2025.10.07 08:00 is not reached from the least timeframe, low price 1.07070 mismatches)
+1	22:01:32.498	TestGenerator: unmatched data error (high value 1.07210 at 2025.10.07 12:00 is not reached from the least timeframe, high price 1.07130 mismatches)
+1	22:01:32.498	TestGenerator: unmatched data error (high value 1.07220 at 2025.10.07 16:00 is not reached from the least timeframe, high price 1.07210 mismatches)
+1	22:01:32.498	TestGenerator: unmatched data error (high value 1.07280 at 2025.10.08 00:00 is not reached from the least timeframe, high price 1.07250 mismatches)
+1	22:01:32.498	TestGenerator: unmatched data error (high value 1.07480 at 2025.10.08 04:00 is not reached from the least timeframe, high price 1.07280 mismatches)
+1	22:01:32.498	TestGenerator: unmatched data error (low value 1.07160 at 2025.10.08 08:00 is not reached from the least timeframe, low price 1.07290 mismatches)
+1	22:01:32.498	TestGenerator: unmatched data error (high value 1.07620 at 2025.10.08 12:00 is not reached from the least timeframe, high price 1.07560 mismatches)
+1	22:01:32.498	TestGenerator: unmatched data error (high value 1.07450 at 2025.10.08 16:00 is not reached from the least timeframe, high price 1.07410 mismatches)
+1	22:01:32.498	TestGenerator: unmatched data error (low value 1.07290 at 2025.10.08 16:00 is not reached from the least timeframe, low price 1.07300 mismatches)
+1	22:01:32.498	TestGenerator: unmatched data error (low value 1.07180 at 2025.10.09 04:00 is not reached from the least timeframe, low price 1.07320 mismatches)
+1	22:01:32.498	TestGenerator: unmatched data error (low value 1.06960 at 2025.10.09 08:00 is not reached from the least timeframe, low price 1.07110 mismatches)
+1	22:01:32.498	TestGenerator: unmatched data error (low value 1.07150 at 2025.10.09 16:00 is not reached from the least timeframe, low price 1.07160 mismatches)
+1	22:01:32.498	TestGenerator: unmatched data error (high value 1.07330 at 2025.10.10 00:00 is not reached from the least timeframe, high price 1.07310 mismatches)
+1	22:01:32.498	TestGenerator: unmatched data error (low value 1.06950 at 2025.10.10 04:00 is not reached from the least timeframe, low price 1.07190 mismatches)
+1	22:01:32.498	TestGenerator: unmatched data error (low value 1.06870 at 2025.10.10 08:00 is not reached from the least timeframe, low price 1.07000 mismatches)
+1	22:01:32.498	TestGenerator: unmatched data error (high value 1.07150 at 2025.10.10 12:00 is not reached from the least timeframe, high price 1.07060 mismatches)
+1	22:01:32.498	TestGenerator: unmatched data error (low value 1.06710 at 2025.10.10 12:00 is not reached from the least timeframe, low price 1.06860 mismatches)
+1	22:01:32.498	TestGenerator: unmatched data error (high value 1.07050 at 2025.10.12 20:00 is not reached from the least timeframe, high price 1.07030 mismatches)
+1	22:01:32.498	TestGenerator: unmatched data error (high value 1.07040 at 2025.10.13 04:00 is not reached from the least timeframe, high price 1.07030 mismatches)
+1	22:01:32.498	TestGenerator: unmatched data error (low value 1.06820 at 2025.10.13 04:00 is not reached from the least timeframe, low price 1.06920 mismatches)
+1	22:01:32.498	TestGenerator: unmatched data error (high value 1.07290 at 2025.10.13 08:00 is not reached from the least timeframe, high price 1.07180 mismatches)
+1	22:01:32.498	TestGenerator: unmatched data error (high value 1.07250 at 2025.10.13 16:00 is not reached from the least timeframe, high price 1.07230 mismatches)
+1	22:01:32.498	TestGenerator: unmatched data error (low value 1.06500 at 2025.10.14 04:00 is not reached from the least timeframe, low price 1.07080 mismatches)
+1	22:01:32.498	TestGenerator: unmatched data error (low value 1.06520 at 2025.10.14 08:00 is not reached from the least timeframe, low price 1.06540 mismatches)
+1	22:01:32.498	TestGenerator: unmatched data error (low value 1.06540 at 2025.10.14 12:00 is not reached from the least timeframe, low price 1.06560 mismatches)
+1	22:01:32.498	TestGenerator: unmatched data error (high value 1.06790 at 2025.10.14 16:00 is not reached from the least timeframe, high price 1.06750 mismatches)
+1	22:01:32.498	TestGenerator: unmatched data error (high value 1.06780 at 2025.10.14 20:00 is not reached from the least timeframe, high price 1.06750 mismatches)
+1	22:01:32.498	TestGenerator: unmatched data error (high value 1.06850 at 2025.10.15 00:00 is not reached from the least timeframe, high price 1.06790 mismatches)
+1	22:01:32.498	TestGenerator: unmatched data error (high value 1.06920 at 2025.10.15 04:00 is not reached from the least timeframe, high price 1.06860 mismatches)
+1	22:01:32.498	TestGenerator: unmatched data error (low value 1.06650 at 2025.10.15 04:00 is not reached from the least timeframe, low price 1.06720 mismatches)
+1	22:01:32.498	TestGenerator: unmatched data error (high value 1.07010 at 2025.10.15 08:00 is not reached from the least timeframe, high price 1.06860 mismatches)
+1	22:01:32.498	TestGenerator: unmatched data error (high value 1.06920 at 2025.10.15 12:00 is not reached from the least timeframe, high price 1.06910 mismatches)
+1	22:01:32.498	TestGenerator: unmatched data error (low value 1.06570 at 2025.10.16 00:00 is not reached from the least timeframe, low price 1.06620 mismatches)
+1	22:01:32.498	TestGenerator: unmatched data error (high value 1.07010 at 2025.10.16 04:00 is not reached from the least timeframe, high price 1.06830 mismatches)
+1	22:01:32.498	TestGenerator: unmatched data error (high value 1.07320 at 2025.10.16 08:00 is not reached from the least timeframe, high price 1.07090 mismatches)
+1	22:01:32.498	TestGenerator: unmatched data error (low value 1.06940 at 2025.10.16 08:00 is not reached from the least timeframe, low price 1.06950 mismatches)
+1	22:01:32.498	TestGenerator: unmatched data error (low value 1.06750 at 2025.10.16 12:00 is not reached from the least timeframe, low price 1.06910 mismatches)
+1	22:01:32.498	TestGenerator: unmatched data error (low value 1.06410 at 2025.10.16 16:00 is not reached from the least timeframe, low price 1.06580 mismatches)
+1	22:01:32.498	TestGenerator: unmatched data error (low value 1.06210 at 2025.10.17 00:00 is not reached from the least timeframe, low price 1.06310 mismatches)
+1	22:01:32.498	TestGenerator: unmatched data error (low value 1.05810 at 2025.10.17 04:00 is not reached from the least timeframe, low price 1.06230 mismatches)
+1	22:01:32.498	TestGenerator: unmatched data error (high value 1.06420 at 2025.10.17 08:00 is not reached from the least timeframe, high price 1.06090 mismatches)
+1	22:01:32.498	TestGenerator: unmatched data error (high value 1.06510 at 2025.10.17 16:00 is not reached from the least timeframe, high price 1.06360 mismatches)
+1	22:01:32.498	TestGenerator: unmatched data error (low value 1.06350 at 2025.10.20 04:00 is not reached from the least timeframe, low price 1.06460 mismatches)
+1	22:01:32.498	TestGenerator: unmatched data error (low value 1.06230 at 2025.10.20 08:00 is not reached from the least timeframe, low price 1.06340 mismatches)
+1	22:01:32.498	TestGenerator: unmatched data error (low value 1.06040 at 2025.10.20 12:00 is not reached from the least timeframe, low price 1.06180 mismatches)
+1	22:01:32.498	TestGenerator: unmatched data error (low value 1.06130 at 2025.10.20 16:00 is not reached from the least timeframe, low price 1.06150 mismatches)
+1	22:01:32.498	TestGenerator: unmatched data error (low value 1.05970 at 2025.10.21 04:00 is not reached from the least timeframe, low price 1.06060 mismatches)
+1	22:01:32.498	TestGenerator: unmatched data error (high value 1.06400 at 2025.10.21 08:00 is not reached from the least timeframe, high price 1.06350 mismatches)
+1	22:01:32.498	TestGenerator: unmatched data error (high value 1.06500 at 2025.10.21 20:00 is not reached from the least timeframe, high price 1.06480 mismatches)
+1	22:01:32.498	TestGenerator: unmatched data error (low value 1.06350 at 2025.10.22 00:00 is not reached from the least timeframe, low price 1.06360 mismatches)
+1	22:01:32.498	TestGenerator: unmatched data error (low value 1.05960 at 2025.10.22 04:00 is not reached from the least timeframe, low price 1.06390 mismatches)
+1	22:01:32.498	TestGenerator: unmatched data error (high value 1.06170 at 2025.10.22 08:00 is not reached from the least timeframe, high price 1.06140 mismatches)
+1	22:01:32.498	TestGenerator: unmatched data error (high value 1.06440 at 2025.10.22 12:00 is not reached from the least timeframe, high price 1.06330 mismatches)
+1	22:01:32.498	TestGenerator: unmatched data error (high value 1.06360 at 2025.10.23 00:00 is not reached from the least timeframe, high price 1.06340 mismatches)
+1	22:01:32.498	TestGenerator: unmatched data error (high value 1.06520 at 2025.10.23 04:00 is not reached from the least timeframe, high price 1.06400 mismatches)
+1	22:01:32.498	TestGenerator: unmatched data error (low value 1.05880 at 2025.10.23 12:00 is not reached from the least timeframe, low price 1.06110 mismatches)
+1	22:01:32.498	TestGenerator: unmatched data error (high value 1.06050 at 2025.10.24 00:00 is not reached from the least timeframe, high price 1.06010 mismatches)
+1	22:01:32.498	TestGenerator: unmatched data error (high value 1.06120 at 2025.10.24 04:00 is not reached from the least timeframe, high price 1.06050 mismatches)
+1	22:01:32.498	TestGenerator: unmatched data error (low value 1.05850 at 2025.10.24 04:00 is not reached from the least timeframe, low price 1.05940 mismatches)
+1	22:01:32.498	TestGenerator: unmatched data error (low value 1.05700 at 2025.10.24 12:00 is not reached from the least timeframe, low price 1.05870 mismatches)
+1	22:01:32.498	TestGenerator: unmatched data error (high value 1.05870 at 2025.10.24 16:00 is not reached from the least timeframe, high price 1.05860 mismatches)
+1	22:01:32.498	TestGenerator: unmatched data error (high value 1.06150 at 2025.10.27 04:00 is not reached from the least timeframe, high price 1.06100 mismatches)
+1	22:01:32.498	TestGenerator: unmatched data error (low value 1.06030 at 2025.10.27 12:00 is not reached from the least timeframe, low price 1.06050 mismatches)
+1	22:01:32.498	TestGenerator: unmatched data error (low value 1.05980 at 2025.10.27 16:00 is not reached from the least timeframe, low price 1.06030 mismatches)
+1	22:01:32.498	TestGenerator: unmatched data error (low value 1.05950 at 2025.10.27 20:00 is not reached from the least timeframe, low price 1.05970 mismatches)
+1	22:01:32.498	TestGenerator: unmatched data error (high value 1.06060 at 2025.10.28 00:00 is not reached from the least timeframe, high price 1.06040 mismatches)
+1	22:01:32.498	TestGenerator: unmatched data error (high value 1.06090 at 2025.10.28 04:00 is not reached from the least timeframe, high price 1.06070 mismatches)
+1	22:01:32.498	TestGenerator: unmatched data error (low value 1.05870 at 2025.10.28 04:00 is not reached from the least timeframe, low price 1.05970 mismatches)
+1	22:01:32.498	TestGenerator: unmatched data error (low value 1.05190 at 2025.10.28 12:00 is not reached from the least timeframe, low price 1.05360 mismatches)
+1	22:01:32.498	TestGenerator: unmatched data error (low value 1.05160 at 2025.10.29 00:00 is not reached from the least timeframe, low price 1.05170 mismatches)
+1	22:01:32.498	TestGenerator: unmatched data error (low value 1.05000 at 2025.10.29 04:00 is not reached from the least timeframe, low price 1.05080 mismatches)
+1	22:01:32.498	TestGenerator: unmatched data error (high value 1.05430 at 2025.10.29 08:00 is not reached from the least timeframe, high price 1.05310 mismatches)
+1	22:01:32.498	TestGenerator: unmatched data error (high value 1.05520 at 2025.10.29 12:00 is not reached from the least timeframe, high price 1.05380 mismatches)
+1	22:01:32.498	TestGenerator: unmatched data error (high value 1.05620 at 2025.10.29 16:00 is not reached from the least timeframe, high price 1.05430 mismatches)
+1	22:01:32.498	TestGenerator: unmatched data error (low value 1.05270 at 2025.10.29 16:00 is not reached from the least timeframe, low price 1.05300 mismatches)
+1	22:01:32.498	TestGenerator: unmatched data error (high value 1.05540 at 2025.10.30 04:00 is not reached from the least timeframe, high price 1.05520 mismatches)
+1	22:01:32.498	TestGenerator: unmatched data error (low value 1.05350 at 2025.10.30 04:00 is not reached from the least timeframe, low price 1.05370 mismatches)
+1	22:01:32.498	TestGenerator: unmatched data error (high value 1.05540 at 2025.10.30 08:00 is not reached from the least timeframe, high price 1.05520 mismatches)
+1	22:01:32.498	TestGenerator: unmatched data error (high value 1.05570 at 2025.10.30 12:00 is not reached from the least timeframe, high price 1.05560 mismatches)
+1	22:01:32.498	TestGenerator: unmatched data error (high value 1.05570 at 2025.10.31 04:00 is not reached from the least timeframe, high price 1.05480 mismatches)
+1	22:01:32.520	TestGenerator: 1522 generating errors, logged 100 first error records
+2	22:01:32.520	1970.01.01 00:00:00  PtrStrategy_EA inputs: InpEntryMode=0; InpMegaTrigger=1; InpExitMode=0; InpConfirmTimeoutBars=3; InpUseHmaStochFilter=0; InpHmaStochPeriod=14; InpHmaStochLowerLevel=10; InpHmaStochUpperLevel=90; InpUseRealStochFilter=1; InpStochKPeriod2=32; InpStochDPeriod2=5; InpStochSlowing2=10; InpStochZoneUpper=90; InpStochZoneLower=10; InpStochZoneLookback=10; InpUseDivergenceFilter=1; InpDivergenceSwingBars=3; InpDivergenceLookback=40; InpMegaFastPeriod=48; InpMegaSlowPeriod=78; InpYellowHalfLength=21; InpGreenHalfLength=40; InpWhiteHalfLength=32; InpWhitePeriod=100; InpWhiteMultiplier=2.8; InpLots=0.1; InpMagicNumber=20260908; InpSlippage=10; InpTakeProfitPips=50; InpStopLossPips=50; InpMaxSpreadPoints=30; 
+0	22:01:32.536	2025.10.01 12:00:00  PtrStrategy_EA GBPCHF,H4: [Init] PtrStrategy_EA  EntryMode=ENTRY_MEGA_ONLY MegaTrigger=MEGA_CROSS_48_78 ExitMode=EXIT_FIXED_PIPS
+0	22:01:32.577	2025.10.06 16:00:00  PtrStrategy_EA GBPCHF,H4: [Signal] MegaTrend SELL ignored  Stochastic not in zone (InpUseRealStochFilter).
+0	22:01:32.579	2025.10.22 20:00:00  PtrStrategy_EA GBPCHF,H4: [Signal] MegaTrend BUY ignored  Stochastic not in zone (InpUseRealStochFilter).
+0	22:01:32.579	2025.10.28 16:00:00  PtrStrategy_EA GBPCHF,H4: [Signal] MegaTrend SELL ignored  Stochastic not in zone (InpUseRealStochFilter).
+0	22:01:32.579	2025.11.03 04:00:00  PtrStrategy_EA GBPCHF,H4: [Signal] MegaTrend BUY ignored  Stochastic not in zone (InpUseRealStochFilter).
+0	22:01:32.581	2025.11.11 20:00:00  PtrStrategy_EA GBPCHF,H4: [Signal] MegaTrend SELL ignored  Stochastic not in zone (InpUseRealStochFilter).
+0	22:01:32.581	2025.11.18 20:00:00  PtrStrategy_EA GBPCHF,H4: [Signal] MegaTrend BUY ignored  Stochastic not in zone (InpUseRealStochFilter).
+0	22:01:32.584	2025.11.28 16:00:00  PtrStrategy_EA GBPCHF,H4: [Signal] SELL ignored  no divergence (InpUseDivergenceFilter).
+0	22:01:32.584	2025.12.05 04:00:00  PtrStrategy_EA GBPCHF,H4: [Signal] MegaTrend BUY ignored  Stochastic not in zone (InpUseRealStochFilter).
+0	22:01:32.584	2025.12.11 00:00:00  PtrStrategy_EA GBPCHF,H4: [Signal] SELL ignored  no divergence (InpUseDivergenceFilter).
+0	22:01:32.586	2025.12.18 04:00:00  PtrStrategy_EA GBPCHF,H4: [Signal] MegaTrend BUY ignored  Stochastic not in zone (InpUseRealStochFilter).
+0	22:01:32.589	2026.01.12 08:00:00  PtrStrategy_EA GBPCHF,H4: [Signal] MegaTrend SELL ignored  Stochastic not in zone (InpUseRealStochFilter).
+0	22:01:32.591	2026.01.26 04:00:00  PtrStrategy_EA GBPCHF,H4: [Signal] MegaTrend BUY ignored  Stochastic not in zone (InpUseRealStochFilter).
+0	22:01:32.591	2026.01.28 08:00:00  PtrStrategy_EA GBPCHF,H4: [Signal] MegaTrend SELL ignored  Stochastic not in zone (InpUseRealStochFilter).
+0	22:01:32.591	2026.02.02 12:00:00  PtrStrategy_EA GBPCHF,H4: [Signal] MegaTrend BUY ignored  Stochastic not in zone (InpUseRealStochFilter).
+0	22:01:32.593	2026.02.06 08:00:00  PtrStrategy_EA GBPCHF,H4: [Signal] MegaTrend SELL ignored  Stochastic not in zone (InpUseRealStochFilter).
+0	22:01:32.593	2026.02.13 08:00:00  PtrStrategy_EA GBPCHF,H4: [Signal] MegaTrend BUY ignored  Stochastic not in zone (InpUseRealStochFilter).
+0	22:01:32.593	2026.02.19 12:00:00  PtrStrategy_EA GBPCHF,H4: [Signal] MegaTrend SELL ignored  Stochastic not in zone (InpUseRealStochFilter).
+0	22:01:32.595	2026.02.23 12:00:00  PtrStrategy_EA GBPCHF,H4: [Signal] MegaTrend BUY ignored  Stochastic not in zone (InpUseRealStochFilter).
+0	22:01:32.595	2026.02.27 20:00:00  PtrStrategy_EA GBPCHF,H4: [Signal] MegaTrend SELL ignored  Stochastic not in zone (InpUseRealStochFilter).
+0	22:01:32.595	2026.03.05 00:00:00  PtrStrategy_EA GBPCHF,H4: [Signal] MegaTrend BUY ignored  Stochastic not in zone (InpUseRealStochFilter).
+0	22:01:32.597	2026.03.18 04:00:00  PtrStrategy_EA GBPCHF,H4: [Signal] MegaTrend SELL ignored  Stochastic not in zone (InpUseRealStochFilter).
+0	22:01:32.597	2026.03.19 00:00:00  PtrStrategy_EA GBPCHF,H4: [Signal] MegaTrend BUY ignored  Stochastic not in zone (InpUseRealStochFilter).
+0	22:01:32.599	2026.03.25 00:00:00  PtrStrategy_EA GBPCHF,H4: [Signal] MegaTrend SELL ignored  Stochastic not in zone (InpUseRealStochFilter).
+0	22:01:32.599	2026.03.27 08:00:00  PtrStrategy_EA GBPCHF,H4: [Signal] MegaTrend BUY ignored  Stochastic not in zone (InpUseRealStochFilter).
+0	22:01:32.599	2026.03.30 08:00:00  PtrStrategy_EA GBPCHF,H4: [Signal] MegaTrend SELL ignored  Stochastic not in zone (InpUseRealStochFilter).
+0	22:01:32.601	2026.04.07 00:00:00  PtrStrategy_EA GBPCHF,H4: [Signal] MegaTrend BUY ignored  Stochastic not in zone (InpUseRealStochFilter).
+0	22:01:32.601	2026.04.14 08:00:00  PtrStrategy_EA GBPCHF,H4: [Signal] MegaTrend SELL ignored  Stochastic not in zone (InpUseRealStochFilter).
+0	22:01:32.603	2026.04.23 12:00:00  PtrStrategy_EA GBPCHF,H4: [Signal] MegaTrend BUY ignored  Stochastic not in zone (InpUseRealStochFilter).
+0	22:01:32.603	2026.05.01 04:00:00  PtrStrategy_EA GBPCHF,H4: [Signal] SELL ignored  no divergence (InpUseDivergenceFilter).
+0	22:01:32.605	2026.05.11 16:00:00  PtrStrategy_EA GBPCHF,H4: [Signal] MegaTrend BUY ignored  Stochastic not in zone (InpUseRealStochFilter).
+0	22:01:32.605	2026.05.15 00:00:00  PtrStrategy_EA GBPCHF,H4: [Signal] MegaTrend SELL ignored  Stochastic not in zone (InpUseRealStochFilter).
+0	22:01:32.605	2026.05.20 00:00:00  PtrStrategy_EA GBPCHF,H4: [Signal] MegaTrend BUY ignored  Stochastic not in zone (InpUseRealStochFilter).
+0	22:01:32.607	2026.05.26 04:00:00  PtrStrategy_EA GBPCHF,H4: [Signal] MegaTrend SELL ignored  Stochastic not in zone (InpUseRealStochFilter).
+0	22:01:32.607	2026.06.02 16:00:00  PtrStrategy_EA GBPCHF,H4: [Signal] MegaTrend BUY ignored  Stochastic not in zone (InpUseRealStochFilter).
+0	22:01:32.609	2026.06.12 20:00:00  PtrStrategy_EA GBPCHF,H4: [Signal] SELL ignored  no divergence (InpUseDivergenceFilter).
+0	22:01:32.609	2026.06.22 04:00:00  PtrStrategy_EA GBPCHF,H4: [Signal] MegaTrend BUY ignored  Stochastic not in zone (InpUseRealStochFilter).
+0	22:01:32.611	2026.06.26 12:00:00  PtrStrategy_EA GBPCHF,H4: [Signal] MegaTrend SELL ignored  Stochastic not in zone (InpUseRealStochFilter).
+0	22:01:32.611	2026.07.01 16:00:00  PtrStrategy_EA GBPCHF,H4: [Signal] MegaTrend BUY ignored  Stochastic not in zone (InpUseRealStochFilter).
+0	22:01:32.612	2026.07.14 20:00:00  PtrStrategy_EA GBPCHF,H4: [Signal] SELL ignored  no divergence (InpUseDivergenceFilter).
+0	22:01:32.612	2026.07.16 08:00:00  PtrStrategy_EA GBPCHF,H4: [Signal] MegaTrend BUY ignored  Stochastic not in zone (InpUseRealStochFilter).
+0	22:01:32.612	2026.07.17 16:00:00  PtrStrategy_EA GBPCHF,H4: [Signal] MegaTrend SELL ignored  Stochastic not in zone (InpUseRealStochFilter).
+0	22:01:32.614	2026.07.26 23:00:00  PtrStrategy_EA GBPCHF,H4: [Signal] MegaTrend BUY ignored  Stochastic not in zone (InpUseRealStochFilter).
+0	22:01:32.614	2026.07.28 20:00:00  PtrStrategy_EA GBPCHF,H4: [Signal] MegaTrend SELL ignored  Stochastic not in zone (InpUseRealStochFilter).
+0	22:01:32.616	2026.08.04 12:00:00  PtrStrategy_EA GBPCHF,H4: [Signal] MegaTrend BUY ignored  Stochastic not in zone (InpUseRealStochFilter).
+0	22:01:32.617	2026.08.17 20:00:00  PtrStrategy_EA GBPCHF,H4: [Signal] SELL ignored  no divergence (InpUseDivergenceFilter).
+0	22:01:32.619	2026.08.25 12:00:00  PtrStrategy_EA GBPCHF,H4: [Signal] MegaTrend BUY ignored  Stochastic not in zone (InpUseRealStochFilter).
+0	22:01:32.619	2026.09.03 20:00:00  PtrStrategy_EA GBPCHF,H4: [Signal] MegaTrend SELL ignored  Stochastic not in zone (InpUseRealStochFilter).
+0	22:01:32.621	2026.09.09 04:00:00  PtrStrategy_EA GBPCHF,H4: [Signal] MegaTrend BUY ignored  Stochastic not in zone (InpUseRealStochFilter).
+0	22:01:32.621	GBPCHF,H4: 27879 tick events (1492 bars, 27979 bar states) processed in 0:00:00.094 (total time 0:00:10.390)
